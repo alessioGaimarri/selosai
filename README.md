@@ -1,2 +1,0 @@
-# selosai
-un blog 

@@ -1,11 +1,17 @@
 <!DOCTYPE html>
-<html lang="italian">
+<html lang="it">
 
 <head>
       <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
+  <!-- P5.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+   <!-- katex -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+  <!--ketex -->
+  
 
   <title>Archivio</title>
 
@@ -21,7 +27,7 @@
   <link href="../theme/css/style.css" type="text/css" rel="stylesheet" />
 
   <!-- Code highlight color scheme -->
-      <link href="../theme/css/code_blocks/github.css" rel="stylesheet">
+      <link href="../theme/css/code_blocks/monokai.css" rel="stylesheet">
 
 
   <!-- Custom fonts -->
@@ -100,33 +106,38 @@
       <article class="post">
       <div class="inner">
           <section class="post-content">
-              <ul class="simple">
-<li>Categorie:<ul>
-<li><a class="reference external" href="/selosai/category/approfondimenti.html">approfondimenti</a></li>
-</ul>
-<!-- - `glossario </selosai/category/glossario.html>`_
-- `recensioni </selosai/category/recensioni.html>`_ -->
-<!--  -->
-</li>
-<li>Tag:<ul>
-<li><a class="reference external" href="/selosai/tag/matematica.html">matematica</a></li>
-<li><a class="reference external" href="/selosai/tag/fisica.html">fisica</a></li>
-</ul>
-</li>
-</ul>
-<embed>
-   <script>
-    window.onload = function () { var node = document.createElement("span");
-                                  var textnode = document.createTextNode("cover: Darwin Vegher - (unsplash.com)");
-                                  node.appendChild(textnode);
-                                  node.className = "credits-header";
-                                  var target = document.querySelectorAll('section.credits')[0]
-                                  target.appendChild(node);
+              <h3>Cronologia</h3>
+  <article >
+    <div >
+     <dl>
+      <dt>30 giugno 2018</dt>
+      <dd><a href="../fibonacci.html">la successione di Fibonacci</a></dd>
+     </dl>
+   </div>
+  </article>
 
-                                  }
-   </script>
 
-</embed>
+   <h3>Categorie</h3>
+
+    <ul >
+      <li><a href="../category/matematica.html">Matematica</a></li>
+
+      <!--
+      <li><a href="../category/recensioni.html">Recensioni</a></li>
+      <li><a href="../category/fisica.html">Fisica</a></li>
+      <li><a href="../category/glossario.html">Glossario</a></li>
+
+      -->
+    </ul><script>
+ window.onload = function () { var node = document.createElement("span");
+                               var textnode = document.createTextNode("cover: Darwin Vegher - (unsplash.com)");
+                               node.appendChild(textnode);
+                               node.className = "credits-header";
+                               var target = document.querySelectorAll('section.credits')[0]
+                               target.appendChild(node);
+
+                               }
+</script>
           </section>
       </div>
       </article>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- P5.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+   <!-- katex -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+  <!--ketex -->
+  
+
+  <title>la successione di Fibonacci</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="./" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="./theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="./theme/css/code_blocks/monokai.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="./fibonacci.html" rel="canonical" />
+
+    <meta name="description" content="tutto cominciò con una coppia di conigli...">
+
+    <meta name="author" content="Alessio Gaimarri">
+
+    <meta name="tags" content="Fibonacci">
+    <meta name="tags" content="liber abaci">
+    <meta name="tags" content="successione">
+    <meta name="tags" content="problema dei conigli">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="selosai"/>
+<meta property="og:title" content="la successione di Fibonacci"/>
+<meta property="og:description" content="tutto cominciò con una coppia di conigli..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./fibonacci.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-06-30 11:00:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/alessio-gaimarri.html">
+<meta property="article:section" content="matematica"/>
+<meta property="article:tag" content="Fibonacci"/>
+<meta property="article:tag" content="liber abaci"/>
+<meta property="article:tag" content="successione"/>
+<meta property="article:tag" content="problema dei conigli"/>
+<meta property="og:image" content="./images/coniglio.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "la successione di Fibonacci",
+  "headline": "la successione di Fibonacci",
+  "datePublished": "2018-06-30 11:00:00+02:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Alessio Gaimarri",
+    "url": "./author/alessio-gaimarri.html"
+  },
+  "image": "./images/coniglio.jpg",
+  "url": "./fibonacci.html",
+  "description": "tutto cominciò con una coppia di conigli..."
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="./pages/about.html">Chi sono</a></li>
+              <li role="presentation"><a href="./pages/archivio.html">Archivio</a></li>
+              <li role="presentation"><a href="./pages/missione.html">Missione</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="./" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">la successione di Fibonacci</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="./author/alessio-gaimarri.html">Alessio Gaimarri</a>
+            | <time datetime="sab 30 giugno 2018">sab 30 giugno 2018</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('./images/coniglio.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <div class="section" id="il-problema-dei-conigli">
+<h2>il problema dei conigli</h2>
+<p>Nel XII capitolo della sua opera più famosa, il <em>liber abaci</em> <a class="footnote-reference" href="#id6" id="id1">[1]</a>, Leonardo da Pisa, detto Fibonacci <a class="footnote-reference" href="#id7" id="id2">[2]</a>,
+propone ai suoi lettori il seguente problema:</p>
+<blockquote class="epigraph">
+Quante coppie di conigli verranno prodotte in un anno, a partire da un'unica coppia
+se ogni mese ciascuna coppia dà alla luce una nuova coppia che diventa produttiva a partire dal secondo mese?</blockquote>
+<p>se indichiamo con la lettera <strong>c</strong> una coppia di conigli appena nati e con <strong>C</strong> una coppia
+di conigli adulti, possiamo rappresentare le regole di crescita e riproduzione in questo modo:</p>
+<table id="regole">
+    <tr><th colspan="3" style="font-weight:bold; text-align:center;">
+        al passaggio di ogni mese:
+    </th></tr>
+    <tr><td>ogni coppia appena nata diventa adulta:</td>
+        <td style="font-weight:bold; text-align:center;">c &rarr; C </td></tr>
+    <tr>
+        <td>ogni coppia adulta genera una nuova coppia:</td>
+        <td style="font-weight:bold; text-align:center;" > C &rarr; C+c</td></tr>
+</table><p>ora possiamo risolvere il problema applicando queste regole
+alla coppia di conigli iniziale <strong>c</strong>, e calcolando ad ogni iterazione
+il totale delle coppie.</p>
+<div id="contenitore">
+     <center>
+     <div id="pulsantiera">
+     <button id="regola" onclick="itera()">Applica regole</button>
+     <button id="ricomincia" onclick="resetta()" style="display: none">ricomincia</button>
+     </div>
+     </center>
+    <table id = "conigliera" style="width:100%">
+        <tr >
+            <th style="text-align:center;">mese</th>
+            <th style="text-align:center;">Coppie di conigli</th>
+            <th style="text-align:center;">totale coppie</th>
+        </tr>
+        <tr>
+        <td style="text-align:center;">0</td>
+        <td class="rabbits" style="text-align:center;">c</td>
+        <td style="text-align:center;">1</td>
+        </tr>
+    </table>
+</div><p>la soluzione trovata da Leonardo, 377 coppie, coincide con il valore che troviamo
+in corrispondenza del 13° mese solo perché, diversamente da lui, siamo partiti dalla coppia appena nata <strong>c</strong>
+e non da quella adulta <strong>C</strong>. <a class="footnote-reference" href="#id10" id="id3">[3]</a></p>
+<p>Osservando con attenzione la successione dei totali
+ci si accorge che, a partire dal terzo, ciascun termine è la somma dei due che
+lo precedono.</p>
+<center>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, ...</center><p>Trovata la soluzione Leonardo suggerisce al lettore la possibilità di proseguire
+<em>&quot;per un numero infinito di mesi&quot;</em>, definendo così la successione ricorsiva,
+che oggi porta il suo nome. <a class="footnote-reference" href="#id8" id="id4">[4]</a></p>
+<blockquote class="epigraph">
+<center><span id="mykatex1">...</span>&nbsp;,&nbsp;
+<span id="mykatex2">...</span>&nbsp;,&nbsp;
+<span id="mykatex3">...</span>&nbsp;&nbsp;
+<span id="mykatex4">...</span></center>
+</blockquote><p>ovviamente la crescita di una popolazione di conigli non seguirà esattamente
+l'andamento della successione, dato che il matematico pisano ha
+scelto il caso ideale di conigli che non invecchiano, in un ambiente privo di predatori
+o malattie e con una quantità di spazio e cibo illimitati.
+Nella realtà l'unica concessione possibile a queste fantasiose ipotesi è un ambiente
+privo di predatori. Se siete curiosi di
+vederne gli effetti date un'occhiata all'isola giapponese di Ōkunoshima. <a class="footnote-reference" href="#id9" id="id5">[5]</a></p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2ixspJ-SnMk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><div class="section" id="note">
+<h3>NOTE</h3>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>dato che gli autori medievali solitamente non davano un titolo alle loro opere, il nome con cui
+viene indicato il libro è tratto dal suo incipit: <em>“Incipit liber Abaci Compositus a leonardo filio
+Bonacij Pisano”</em>. La parola latina <em>“abbacus”</em> veniva adoperata all'epoca in riferimento al metodo di calcolo
+basato sul sistema numerico indo-arabico e non allo strumento di calcolo.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>il soprannome deriva dall’espressione latina <em>“filius Bonacci”</em> ed è stato coniato nel 1838 dallo storico
+Guillaume Libri. I contemporanei, e Leonardo stesso in alcune sue opere, adoperavano invece il termine
+dialettale toscano <em>“bigollo”</em> che voleva dire viaggiatore.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup>
+<col class="label"><col>
+</colgroup>
+<tbody valign="top">
+<tr>
+<td class="label"><a class="fn-backref" href="#id3">[3]</a></td>
+<td>
+
+<br />
+<em id="estratto">
+`Quante coppie di conigli saranno prodotte in un anno da una coppia.
+Un tale mise una coppia di conigli in un luogo che era circondato da ogni parte
+da una parete per sapere quante coppie da essa fossero prodotte in un anno,
+
+la loro natura essendo che ogni mese fosse prodotta un’altra coppia e che cominciassero
+a figliare il secondo mese dopo la nascita.
+
+Poiché la coppia soprascritta figlia il primo mese, lo stesso raddoppierai;
+saranno due coppie dopo un mese.
+Delle quali una, cioè la prima, figlierà nel secondo mese, e così nel secondo mese saranno 3 coppie.
+Delle quali in un mese due resteranno gravide e produrranno il terzo mese 2 coppie di conigli,
+e così in questo mese ci saranno 5 coppie di conigli.
+Delle quali 3 resteranno gravide, e nel quarto mese saranno 8 paia.
+Delle quali 5 produrranno altre 5 paia che aggiunte alle 8 fanno 13 nel quinto mese.
+Delle quali 5 coppie che furono prodotte nello stesso mese, non concepiscono in questo mese,
+ma le altre 8 resteranno gravide, e così nel sesto mese sono 21 coppie. Aggiunti ai quali le 13 coppie
+che nasceranno nel settimo, saranno nello stesso 34 coppie: aggiunte alle quali le 21 coppie che
+nasceranno nell’ottavo mese, saranno in esso 55 coppie. Aggiunte alle quali le 34 coppie che
+nasceranno nel nono mese, saranno in esso 89 coppie: aggiunte alle quali di nuovo 55 che nasceranno
+nel decimo, saranno in esso 144 coppie. Aggiunte alle quali di nuovo 89 coppie che nasceranno
+nell’undecimo mese, saranno in esso 233 coppie. Aggiunti con questi 144 coppie che nasceranno
+nell’ultimo mese, saranno 377 paia. E tante paia produrrà la soprascritta coppia nel luogo
+predetto in capo di uno anno. Puoi infatti vedere in questo margine come abbiamo operato,
+vale a dire come aggiungemmo il primo numero con il secondo, cioè 1 con 2, e il secondo con il terzo,
+e il terzo con il quarto, e il quarto con il quinto, e così via, finché aggiungemmo il decimo con l’undecimo,
+cioè 144 con 233, e avemmo la somma dei soprascritti conigli, cioè 377. E così puoi fare con ordine
+per un numero infinito di mesi.`
+</em>
+<br />
+<p><button onclick="latino()">Latino</button>/<button onclick="italiano()">Italiano</button>
+<strong>Leonardo Pisano [Liber Abaci cap. XII]</strong></p>
+</td>
+</tr>
+</tbody>
+</table><table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>una successione è detta ricorsiva, se a partire da uno o più elementi di partenza, è possibile calcolarne
+i successivi secondo un' espressione matematica ben definita.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[5]</a></td><td>in Australia gli effetti della riproduzione incontrollata dei conigli sono molto meno gradevoli.
+Dal momento della loro introduzione, avvenuta nel 1788 ad opera dei primi coloni europei, ad oggi
+hanno causato danni devastanti all'ecosistema, portando sull'orlo dell'estinzione alcune specie autoctone
+e accelerando il processo di erosione e desertificazione del territorio.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td></td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="bibliografia">
+<h3>Bibliografia</h3>
+<ul class="simple">
+<li>Devlin K., <a class="reference external" href="https://www.amazon.it/gp/product/8817064785/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;tag=selosai-21&amp;creative=21718&amp;linkCode=as2&amp;creativeASIN=8817064785&amp;linkId=0f4113ee2c97d243f60a9d07c6db3964">I numeri magici di Fibonacci</a>, Milano, Rizzoli, 2013</li>
+<li>Leonardo Pisano, <a class="reference external" href="https://www.e-rara.ch/download/pdf/10607990?name=Il%20liber%20abbaci%20di%20Leonardo%20Pisano%20secondo%20la%20lezione%20del%20codige%20magliabechiano">Liber abaci</a>, edizione latina a stampa del 1857, (versione pdf scaricabile)</li>
+<li>Ancora Luciano, <a class="reference external" href="https://archive.org/details/LiberAbaci">il liber abaci di Leonardo Fibonacci tradotto in italiano I</a>, scaricabile in diversi formati.</li>
+</ul>
+</div>
+<div class="section" id="in-rete">
+<h3>In rete</h3>
+<ul class="simple">
+<li>Fanini B., Leonardo Pisano, Bigollo - <a class="reference external" href="http://www.accademiadellacrusca.it/it/lingua-italiana/consulenza-linguistica/domande-risposte/leonardo-pisano-bigollo">accademia della crusca</a></li>
+<li>Fibonacci numbers on The online encyclopedia of integer sequences - <a class="reference external" href="https://oeis.org/search?q=1%2C1%2C2%2C3%2C5%2C8&amp;language=english&amp;go=Search">OEIS</a></li>
+<li>Zachos E., This Island Is Overrun With Rabbits - <a class="reference external" href="https://news.nationalgeographic.com/2017/12/rabbit-island-japan-overrun-tourism-spd/">National geographic</a></li>
+</ul>
+<p><strong>NOTA</strong>: i link a pagine esterne sono stati controllati l'ultima volta il 22 giugno 2018.</p>
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = "https://alessiogaimarri.github.io/selosai/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "fibonacci"; // Replace PAGE_IDENTIFIER (lo slug del post)
+ };
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://selosai.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//selosai.disqus.com/count.js" async></script><link rel="stylesheet" type="text/css" href="./css/fibonacci.css">
+<script src="./js/fibonacci.js"></script></div>
+</div>
+
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=la successione di Fibonacci&amp;url=./fibonacci.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=./fibonacci.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=./fibonacci.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="./tag/fibonacci.html">Fibonacci</a><a href="./tag/liber-abaci.html">liber abaci</a><a href="./tag/successione.html">successione</a><a href="./tag/problema-dei-conigli.html">problema dei conigli</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="./theme/js/script.js"></script>
+
+</body>
+</html>
