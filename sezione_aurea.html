@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- P5.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+   <!-- katex -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+  <!--ketex -->
+  
+
+  <title>la sezione aurea</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="./" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="./theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="./theme/css/code_blocks/monokai.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="./sezione_aurea.html" rel="canonical" />
+
+    <meta name="description" content="sottotitolo">
+
+    <meta name="author" content="Alessio Gaimarri">
+
+    <meta name="tags" content="sezione aurea">
+    <meta name="tags" content="Euclide">
+    <meta name="tags" content="Fibonacci">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="selosai"/>
+<meta property="og:title" content="la sezione aurea"/>
+<meta property="og:description" content="sottotitolo"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./sezione_aurea.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-07-14 10:00:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/alessio-gaimarri.html">
+<meta property="article:section" content="matematica"/>
+<meta property="article:tag" content="sezione aurea"/>
+<meta property="article:tag" content="Euclide"/>
+<meta property="article:tag" content="Fibonacci"/>
+<meta property="og:image" content="./images/rettangolo.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "la sezione aurea",
+  "headline": "la sezione aurea",
+  "datePublished": "2018-07-14 10:00:00+02:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Alessio Gaimarri",
+    "url": "./author/alessio-gaimarri.html"
+  },
+  "image": "./images/rettangolo.jpg",
+  "url": "./sezione_aurea.html",
+  "description": "sottotitolo"
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="./pages/about.html">Chi sono</a></li>
+              <li role="presentation"><a href="./pages/archivio.html">Archivio</a></li>
+              <li role="presentation"><a href="./pages/missione.html">Missione</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="./" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">la sezione aurea</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="./author/alessio-gaimarri.html">Alessio Gaimarri</a>
+            | <time datetime="sab 14 luglio 2018">sab 14 luglio 2018</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('./images/rettangolo.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <div class="section" id="le-origini">
+<h2>Le origini</h2>
+<p>il numero che avrebbe meritato a partire dal Rinascimento l'altisonante appellativo di <em>&quot;divina proporzione&quot;</em> <a class="footnote-reference" href="#id6" id="id1">[1]</a>
+e qualche secolo più tardi quello più mondano di <em>&quot;sezione aurea&quot;</em>, <a class="footnote-reference" href="#id7" id="id2">[2]</a> con cui è generalmente indicato ancora oggi,
+è stato definito la prima volta nel 300 a.C. da Euclide.</p>
+<blockquote class="epigraph">
+<p>&quot;Si dice che una retta risulta divisa in estrema e media ragione, quando tutta quanta la retta sta alla
+parte maggiore di essa come la parte maggiore sta a quella minore.&quot;</p>
+<p><strong>[Elementi Libro VI, III definizione]</strong></p>
+</blockquote>
+<p>Se applichiamo la definizione ad un segmento AB, il punto C che lo divide in estrema e media ragione sarà quello
+che soddisfa la proporzione:</p>
+<blockquote class="epigraph">
+   <center><span id="proporzione">...</span>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <span id="condSeg">...</span>
+   </center>
+</blockquote><p>tale punto può essere trovato con riga e compasso seguendo alcuni passaggi:</p>
+<div>
+<div id="passaggi">
+
+</div>
+<table>
+<tr>
+ <td id="RappSegmento"></td>
+<td>
+<svg  onclick="avanti();" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+ stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+ class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle>
+ <polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12">
+ </line></svg>
+</td>
+</tr>
+
+
+</table>
+
+</div><p>Il rapporto aureo, indicato con la lettera τ <a class="footnote-reference" href="#id8" id="id3">[3]</a>, è dato dal rapporto:</p>
+<blockquote class="epigraph">
+   <center><span id="tauRapp">...</span></center>
+</blockquote><p>Per ricavarne l'espressione algebrica riscriviamo la proporzione ponendo il segmento di partenza AB = τ
+e AC = 1 così si avrà CB = τ - 1.</p>
+<blockquote class="epigraph">
+   <center><span id="proporzioneX">...</span></center>
+</blockquote>
+
+<p>a questo punto, sapendo che in una proporzione il prodotto dei
+<span id="refMed" onmouseover="evidenziaMedi()" onmouseout="normalizzaMedi()" style="color:black;">medi</span>
+deve essere uguale a quello degli
+<span id="refEst" onmouseover="evidenziaEstremi()" onmouseout="normalizzaEstremi()" style="color:black;">estremi</span> avremo:
+</p><blockquote class="epigraph" >
+   <center><span id="passaggioA1" >...</span></center>
+</blockquote><p>da cui si ottiene, eseguendo la moltiplicazione e portando tutti i termini al primo membro,
+un'equazione di secondo grado nell'incognita τ.</p>
+<blockquote class="epigraph">
+   <center><span id="eqSecGrado">...</span></center>
+</blockquote><p>che risolviamo applicando la formula risolutiva delle equazioni di II grado:</p>
+<blockquote class="epigraph" id="pass1">
+   <center>
+   <span id="eqSGgen">...</span>
+   &nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;
+   <span id="formulaRisolutiva">...</span>
+   </center>
+</blockquote><p>Nel nostro caso delle due soluzioni l'unica ad avere un significato geometrico è quella col segno positivo. <a class="footnote-reference" href="#id9" id="id4">[4]</a></p>
+<blockquote class="epigraph">
+   <center><span id="tauAlgebrica">...</span></center>
+</blockquote><p>il valore così ottenuto, non potendo essere espresso come rapporto tra interi, vista la presenza della radice di 5
+al numeratore, è un numero irrazionale. Ciò implica che i decimali di τ sono infiniti e non si ripetono mai.</p>
+</div>
+<div class="section" id="il-legame-con-la-successione-di-fibonacci">
+<h2>il legame con la successione di Fibonacci</h2>
+<p>Nel XVII secolo l'astronomo tedesco Johannes Kepler scoprì che
+il rapporto tra due valori consecutivi della <a class="reference external" href="./fibonacci.html">successione di Fibonacci</a></p>
+<blockquote class="epigraph">
+<center><span id="mykatex1">...</span>&nbsp;,&nbsp;
+<span id="mykatex2">...</span>&nbsp;,&nbsp;
+<span id="mykatex3">...</span>&nbsp;&nbsp;
+<span id="mykatex4">...</span></center>
+</blockquote>
+
+<center><p>tende al valore della sezione aurea τ.</p></center><center>
+ <button onclick="calcolaRap();" id="phiCalcola">calcola Rapporto</button>
+ <button onclick="reset();" id="phiRicomincia" style="display: none">Ricomincia</button>
+ </center>
+
+  <table id = "tabellaCalcoloPhi" style="width:100%">
+         <tr >
+             <th style="text-align:center;">n</th>
+             <th style="text-align:center;">F<SUB>n+1</SUB>/F<SUB>n</SUB></th>
+
+              <th style="text-align:center;">τ-F<SUB>n+1</SUB>/F<SUB>n</SUB></th>
+         </tr>
+         <tr>
+         <td style="text-align:center;" id="indi">0</td>
+         <td class="rabbits" style="text-align:center;"  >
+         <span id="frazio" > 1/1</span> = <span id="display" >1</span>
+         </td>
+         </td>
+         <td style="text-align:center;"  id="epsilon">0,6180339887498948</td>
+         </tr>
+     </table><p>Se confrontiamo i valori ottenuti ad ogni passaggio con il valore della sezione aurea,
+qui riportato fino alla 16<sup>a</sup> cifra decimale:</p>
+<blockquote class="epigraph">
+   <center><span id="fi">...</span></center>
+</blockquote><p>vediamo che all'aumentare dell'indice n, il rapporto approssima sempre meglio il valore di τ.
+Arrivati a n = 20 si ottiene ad esempio un'approssimazione corretta fino alla 8<sup>a</sup> cifra decimale.
+Immaginando di proseguire all'infinito possiamo riscrivere la sezione aurea come il limite:</p>
+<blockquote class="epigraph">
+<center >
+<span id="limite">...</span>
+</center></blockquote>
+<p>La dimostrazione vera e propria di questo risultato è stata ottenuta nel 1753 dal matematico
+scozzese Robert Simson. <a class="footnote-reference" href="#id10" id="id5">[5]</a></p>
+</div>
+<div class="section" id="note">
+<h2>NOTE</h2>
+<table class="docutils footnote" frame="void" id="id6" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Luca Pacioli scrisse nel 1498 un intero trattato sulle proprietà di questo numero, intitolato per l'appunto
+&quot;De divina proportione&quot;, in cui collegava le proprietà della sezione agli attributi divini. Ad esempio: <em>&quot;così come Dio non può propriamente essere definito né compreso da noi attraverso le parole, la nostra
+proporzione non può essere determinata attraverso alcuna quantità razionale, rimanendo sempre occulta e
+segreta, così da essere chiamata irrazionale dai matematici&quot;</em>.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id7" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Questo termine è stato utilizzato per la prima volta nel 1835 dal matematico tedesco Martin Ohm
+nel testo &quot;Die Reine Elementar-Mathematik&quot;.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>dall'iniziale della parola greca <em>'τομη'</em>, che vuol dire sezione. Recentemente
+si è cominciato ad usare la lettera Φ al posto di τ, in onore dell'architetto greco Fidia (<em>'Φειδίας'</em>), che
+secondi alcuni ha utilizzato la proporzione aurea nella progettazione del Partenone.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>dato che il rapporto tra due quantità positive (lunghezze di due segmenti) non può avere come risultato un numero
+negativo, che si otterrebbe considerando la soluzione con il segno -, dato che la radice di 5 è maggiore di 1.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[5]</a></td><td>una dimostrazione di questo risultato si può trovare al seguente <a class="reference external" href="https://proofwiki.org/wiki/Ratio_of_Consecutive_Fibonacci_Numbers">link</a></td></tr>
+</tbody>
+</table>
+<div class="section" id="bibliografia">
+<h2>Bibliografia</h2>
+<ul class="simple">
+      <li>Frajese A. (a cura di), Gli elementi di Euclide, Torino, UTET, 1979</li>
+      <li>Livio M., <a class="reference external" href="https://www.amazon.it/gp/product/8817095109/ref=as_li_qf_asin_il_tl?ie=UTF8&amp;tag=selosai-21&amp;creative=21718&amp;linkCode=as2&amp;creativeASIN=8817095109&amp;linkId=6fcd743e2090701eed73648a8a6feffc" target="_blank">La sezione aurea. Storia di un numero e di un mistero che dura da tremila anni</a> , Milano, Rizzoli, 2017</li>
+      <li>Dunlap R.A., <a class="reference external" href="https://amzn.to/2z6mrP2" target="_blank">The golden ratio and Fibonacci numbers</a>, World Scientific, 1997.</li>
+</ul>
+</div><p style="font-size:90%;">NOTA: i link a pagine esterne sono stati controllati l'ultima volta il 13 luglio 2018</p>
+<script src="./js/sezioneAurea.js"></script></div>
+
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=la sezione aurea&amp;url=./sezione_aurea.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=./sezione_aurea.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=./sezione_aurea.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="./tag/sezione-aurea.html">sezione aurea</a><a href="./tag/euclide.html">Euclide</a><a href="./tag/fibonacci.html">Fibonacci</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="./theme/js/script.js"></script>
+
+</body>
+</html>
