@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- P5.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+   <!-- katex -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+  <!--ketex -->
+  
+
+  <title>il problema della corona</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="./" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="./theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="./theme/css/code_blocks/monokai.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="./archimede.html" rel="canonical" />
+
+    <meta name="description" content="Eureka!">
+
+    <meta name="author" content="Alessio Gaimarri">
+
+    <meta name="tags" content="Archimede">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="selosai"/>
+<meta property="og:title" content="il problema della corona"/>
+<meta property="og:description" content="Eureka!"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./archimede.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-07-28 10:05:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/alessio-gaimarri.html">
+<meta property="article:section" content="fisica"/>
+<meta property="article:tag" content="Archimede"/>
+<meta property="og:image" content="./images/corona.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "il problema della corona",
+  "headline": "il problema della corona",
+  "datePublished": "2018-07-28 10:05:00+02:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Alessio Gaimarri",
+    "url": "./author/alessio-gaimarri.html"
+  },
+  "image": "./images/corona.jpg",
+  "url": "./archimede.html",
+  "description": "Eureka!"
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="./pages/about.html">Chi sono</a></li>
+              <li role="presentation"><a href="./pages/archivio.html">Archivio</a></li>
+              <li role="presentation"><a href="./pages/missione.html">Missione</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="./" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">il problema della corona</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="./author/alessio-gaimarri.html">Alessio Gaimarri</a>
+            | <time datetime="sab 28 luglio 2018">sab 28 luglio 2018</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('./images/corona.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>Immaginate di avere 700 grammi di oro purissimo e di volerlo utilizzare per realizzare un diadema
+da regalare alla vostra ragazza. <a class="footnote-reference" href="#id8" id="id1">[1]</a> Per farlo consegnate il prezioso lingotto a un bravo orafo che
+di lì a qualche giorno vi consegna un vero capolavoro. Sicuri di conquistare il cuore della vostra
+amata correte a casa con il prezioso regalo sottobraccio. Una volta arrivati però venite assaliti dal dubbio
+che lo scaltro artigiano possa avervi truffato sottraendo parte dell'oro.</p>
+<p>Per prima cosa controllate con una bilancia che la massa della corona coincida con quella dell'oro consegnato.
+Anche in questo caso non si può escludere che l'orafo abbia sostituito parte dell'oro con una quantità di
+materiale meno prezioso, come l'argento, tale da ottenere una corona di massa uguale a quella di partenza.</p>
+<blockquote class="epigraph">
+Come verificare la vostra ipotesi senza dover prelevare un campione, e quindi danneggiare la corona?</blockquote>
+<p>Questo è il problema che Gerone, re di Siracusa, pose ad Archimede, secondo l'aneddoto riportato da
+Vitruvio nel <em>&quot;de architectura&quot;</em>. <a class="footnote-reference" href="#id14" id="id2">[2]</a> <a class="footnote-reference" href="#id9" id="id3">[3]</a></p>
+<div class="section" id="eureka">
+<h2>Eureka!</h2>
+<p>Leggenda vuole che la soluzione gli si presentò chiaramente quando si accorse, entrando in una
+vasca piena d'acqua, che</p>
+<blockquote class="epigraph">
+&quot;quanta era la massa del suo corpo che vi entrava, altrettanta acqua ne usciva&quot;</blockquote>
+<p>questo meccanismo gli avrebbe consentito di misurare il volume della corona senza
+danneggiarla, dandogli modo di appurarne la composizione.</p>
+<blockquote class="epigraph">
+&quot;spinto dall'allegrezza saltò fuori dalla vasca, e nudo correndo verso casa, andava ad alta voce
+dicendo di aver trovato quel che cercava, mentre correndo
+ogni poco gridava in greco eureka eureka.&quot;</blockquote>
+<div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<img alt="vignetta" src="images/eureka.jpg" style="width: 720px; height: auto; max-width: 100%;">
+<p class="caption">Giammaria Mazzuchelli, 1737</p>
+<div class="legend">
+Vignetta tratta dalla pagina Notizie istoriche e critiche intorno alla vita, alle invenzioni,
+ed agli scritti di Archimede siracusano  pubblicato a Brescia, Italia, nel 1737.
+</div>
+</div><p>L'esclamazione greca εὕρηκα, <a class="footnote-reference" href="#id10" id="id4">[4]</a> poi traslitterata in eureka, è diventata proverbiale per indicare
+la soddisfazione provata nel trovare la soluzione a un problema complesso.</p>
+<div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<div class="contenitore">
+<iframe class="video" src="https://www.youtube-nocookie.com/embed/J8Cn1mI0L-c?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+<p class="caption">Scena tratta dal film <b>Interstellar</b> di Christopher Nolan, 2014.</p>
+</div></div>
+<div class="section" id="il-procedimento">
+<h2>Il procedimento</h2>
+<p>Una volta trovato il metodo con cui determinare il volume della corona senza danneggiarla,
+Archimede si fece dare due blocchi di massa pari a quella della corona, uno d'argento
+e l'altro d'oro. Dal momento che l'oro ha una densità maggiore dell'argento:</p>
+<blockquote class="epigraph">
+<center>
+<span id="densità">...</span>
+</center>
+</blockquote><p>dalla definizione di densità, come rapporto tra la massa <strong>m</strong> e il volume <strong>V</strong> occupato da
+un corpo, avremo che, a parità di massa, l'argento occuperà un volume maggiore dell'oro. <a class="footnote-reference" href="#id11" id="id5">[5]</a></p>
+<blockquote class="epigraph">
+<center>
+<span id="volumi">...</span>
+</center>
+</blockquote>
+<blockquote class="epigraph">
+<center>
+<span id="risultato">...</span>
+</center>
+</blockquote><p>per stabilire la composizione della corona basterà a questo punto
+confrontarne il volume con quello dei due blocchi di materiale puro.
+Le possibilità che si presentano sono due:</p>
+<blockquote class="epigraph">
+<center>
+<span id="ipotesiGood">...</span> <b>"corona genuina"</b>
+</center>
+</blockquote>
+
+<blockquote class="epigraph">
+<center>
+<span id="ipotesiNoGood">...</span> <b>"corona contraffatta"</b>
+
+</center>
+</blockquote><p>Le misurazioni dei volumi, eseguite <em>'per immersione'</em>,
+attraverso il procedimento così descritto:</p>
+<blockquote class="epigraph">
+&quot;empì d'acqua fino all'orlo un gran vaso, e vi calò dentro la massa d'argento,
+onde vi versò tanta acqua, quanta era la grandezza tuffata nel vaso:
+indi estratta la massa, vi rifuse a misura l'acqua che vi era di meno,
+fino all'orlo come stava prima. Così trovò quanta era la quantità dell'acqua
+corrispondente al dato peso d'argento.&quot;</blockquote>
+<p>portarono Archimede a scoprire:</p>
+<blockquote class="epigraph">
+&quot;che si era versata più acqua per la corona, che per la massa d'oro di egual peso&quot;</blockquote>
+<p>e dimostrare così il furto compiuto ai danni del re. Non si conosce la sorte toccata al colpevole
+ma presuppongo nulla di piacevole.</p>
+</div>
+<div class="section" id="come-calcolare-il-maltolto">
+<h2>Come calcolare il maltolto?</h2>
+<p>Una volta accertato il furto Archimede avrebbe potuto esprimere la frazione di argento nella
+corona partendo dalla disuguaglianza soddisfatta dai tre volumi misurati:</p>
+<blockquote class="epigraph">
+<center><span id="prop1">...</span></center>
+</blockquote><p>dato che la quantità d'argento sarà proporzionale alla differenza tra il volume della corona
+e quello del blocco d'oro, e che tale valore non potrà superare la differenza in volume tra i due
+blocchi possiamo riscriverla, per il primo principio di equivalenza delle disequazioni, <a class="footnote-reference" href="#id12" id="id6">[6]</a> in questo modo:</p>
+<blockquote class="epigraph">
+<center><p><span id="prop2">...</span></p></center>
+<br>
+ <center><p><span id="prop3">...</span></p></center>
+</blockquote><p>e ottenere il valore della frazione di argento, compreso tra 0 e 1, dividendo per la differenza dei volumi
+dei due blocchi. <a class="footnote-reference" href="#id13" id="id7">[7]</a></p>
+<blockquote class="epigraph">
+<center><span id="prop4">...</span></center>
+</blockquote></div>
+<div class="section" id="ma-e-davvero-andata-cosi">
+<h2>Ma è davvero andata così?</h2>
+<p>Nonostante il procedimento descritto da Vitruvio sia in linea di principio realizzabile e logicamente
+corretto molti, tra cui Galileo, hanno dubitato della sua veridicità, dal momento che, come dimostrerò
+nella seconda parte dell'articolo, i volumi in gioco sono troppo piccoli se confrontati con le incertezze
+legate al metodo di misurazione <em>'per immersione'</em> dei volumi.</p>
+<div class="section" id="note">
+<h3>NOTE</h3>
+<table class="docutils footnote" frame="void" id="id8" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>nella realtà l'unica corona che potrei offrirle è <a class="reference external" href="https://www.goodfreephotos.com/albums/food/corona-beer-on-beach.jpg">questa</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id14" rules="none">
+<colgroup>
+<col class="label"><col>
+</colgroup>
+<tbody valign="top">
+<tr>
+<td class="label"><a class="fn-backref" href="#id2">[2]</a></td>
+<td>
+
+<br />
+<em id="estratto">
+Archimede poi sebbene molte e varie sieno state le mirabili
+    invenzioni, fra tutte però quella, che mostra maggior sottigliezza, è quella che dirò.
+    Gerone innalzato alla potestà regale in Siracusa avendo per lo felice esito delle sue cose
+    declinato di porre in un certo tempio una corona d'oro in voto agli
+    dei immortali, la diede a fare di grossa valuta, e consegnò l’egual peso
+    d'oro all'appaltatore. Questi al tempo stabilito presentò al Re il prescritto lavoro fatto con
+    delicatezza, e il peso della corona parve che
+    corrispondesse al dato; ma essendo stata fatta una 'denuncia, che ne era»
+    stato tolto dell' oro , e mescolatovi altrettanto d'argento , ne andò in
+    collera Gerone per essere stato burlato , nè sapendo come appurare il
+    furto, ne richiese Archimede, perché se ne addossasse egli il pensiero.
+    Stando egli con questa cura, andò per calò al bagno, ed ivi mentre calava nella folla,
+    s’ accorse, che quanta era la massa del suo corpo che vi entrava,
+    altrettanta acqua ne usciva: quindi avendo incontrato il metodo della dimostrazione di una tal cosa,
+    non vi si fermò,
+    ma spinto dall’allegrezza saltò fuori del labbro, e nudo correndo verso
+    casa, andava ad alta voce dicendo di aver trovato quel che cercava,
+    mentre correndo ogni poco gridava in greco eureca eureca. Così con
+    quel principio d’invenzione si narra, che fece due masse di peso egua-
+    le a quel della corona, una d'oro, l'altra d'argento; ciò fatto empì
+    d'acqua fino all'orlo un gran vaso, e vi calò dentro la massa d'argento,
+    onde vi versò tanta acqua, quanta era la grandezza tuffata nel vaso:
+    indi estratta la massa, vi rifuse a misura l'acqua che vi era di meno,
+    fino all'orlo come stava prima.
+    Così trovò quanta era la quantità dell'acqua corrispondente al dato peso d'argento.
+    Fatta questa esperienza, calò parimenti nel vaso pieno la massa d'oro,
+    indi toltala, rifondendo della stessa maniera l’acqua a misura, trovò
+    non essercene versata tanta, ma tanto meno, di quanto era minore
+    di mole la massa d'oro eguale di peso a quella d’argento. Finalmente riempito di nuovo il vaso,
+    tuffò nell'acqua la stessa corona, e
+    scoprì , che si era versata più acqua per la corona, che per la massa
+    d oro di egual peso: e così da quell'acqua di più che si era versata per la corona,
+    e non per la massa, col calcolo trovò la quantità di argento mescolata nell'oro,
+    e il manifesto furto dell'appaltatore.
+</em>
+<br />
+<p><button onclick="latino()">Latino</button>/<button onclick="italiano()">Italiano</button>
+<br>
+<br>
+<strong>Vitruvio [De Architectura Liber IX] (15 a.C.)</strong></p>
+</td>
+</tr>
+</tbody>
+</table><table class="docutils footnote" frame="void" id="id9" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td>lo stesso racconto viene utilizzato da Sol (Mark Margolis) per convincere il suo allievo
+Max (Sean Gullette) a concedersi una pausa dalle sue ricerche nel film <em>&quot;π - Il teorema del delirio&quot;</em> di Darren Aronofsky (1998)
+- <a class="reference external" href="https://www.youtube.com/watch?v=B8h5Owjxomg">clip</a>.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>εὕρηκα perfetto del verbo εὑρίσκω «trovare», significa «ho trovato».</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id11" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[5]</a></td><td>dato che aumentando il denominatore di una frazione senza modificarne il numeratore fa sì che
+il rapporto diminuisca. Se non siete convinti pensate a come si riduce la dimensione della vostra fetta di pizza
+all'aumentare del numero di ospiti con cui dovete dividerla equamente.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id12" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[6]</a></td><td>Il <em>primo principio di equivalenza  delle disequazioni</em> afferma che aggiungendo o sottraendo ad entrambi i membri di una disequazione,
+uno stesso numero o una stessa espressione contenente l'incognita, otteniamo una disequazione
+equivalente a quella data.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id13" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id7">[7]</a></td><td>Questa operazione è consentita dal <em>secondo principio di equivalenza delle disequazioni</em>, secondo il quale:
+moltiplicando o dividendo entrambi i membri di una disequazione per uno stesso numero diverso da zero
+(o per una stessa espressione che non possa annullarsi), si ottiene una disequazione equivalente a quella
+data se il numero è positivo; se invece il numero è negativo per ottenere una disequazione equivalente
+a quella data occorre invertire il verso della disequazione.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id14" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td></td></tr>
+</tbody>
+</table>
+<div class="section" id="bibliografia">
+<h3>Bibliografia</h3>
+<ul class="simple">
+<li>Vitruvio, <a class="reference external" href="https://archive.org/details/dellarchitettura01vitr" target="_blank">Dell'architettura</a>, edizione del 1829 pubblicata da Carlo Amati</li>
+</ul>
+</div>
+
+<div class="section" id="filmografia">
+<h3>Filmografia</h3>
+<ul class="simple">
+<li><a class="reference external" href="https://amzn.to/2LhUdX2" target="_blank">Interstellar</a>, regia di Christopher Nolan, 2014</li>
+<li><a class="reference external" href="https://amzn.to/2uY62XE" target="_blank">π - Il teorema del delirio (π)</a>, regia di Darren Aronofsky, 1998</li>
+
+</ul>
+</div><div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = "https://alessiogaimarri.github.io/selosai/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "archimede"; // Replace PAGE_IDENTIFIER (lo slug del post)
+ };
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://selosai.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//selosai.disqus.com/count.js" async></script><p style="font-size:90%;">NOTA: i link a pagine esterne sono stati controllati l'ultima volta il 22 luglio 2018</p>
+<link rel="stylesheet" type="text/css" href="./css/archimede.css">
+<script src="./js/archimede.js"></script></div>
+</div>
+
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=il problema della corona&amp;url=./archimede.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=./archimede.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=./archimede.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="./tag/archimede.html">Archimede</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+      
+      <!-- clicky badge-->
+      <a title="Real Time Web Analytics" href="http://clicky.com/101130897"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+        <script src="//static.getclicky.com/js" type="text/javascript"></script>
+        <script type="text/javascript">try{ clicky.init(101130897); }catch(e){}</script>
+        <noscript><p>
+        <img alt="Clicky" id="clicky" src="//in.getclicky.com/101130897ns.gif" /></p></noscript>
+
+
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="./theme/js/script.js"></script>
+
+</body>
+</html>
