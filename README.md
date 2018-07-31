@@ -1,5 +1,7 @@
 # Selosai
 
+# https://alessiogaimarri.github.io/selosai/
+
 un blog dedicato alla matematica e alla fisica 
 con un'attenzione particolare al loro sviluppo 
 storico e ai legami con le altre discipline.
