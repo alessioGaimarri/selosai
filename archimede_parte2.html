@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- P5.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+   <!-- katex -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+  <!--ketex -->
+  
+
+  <title>il problema della corona (II)</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="./" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="./theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="./theme/css/code_blocks/monokai.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="./archimede_parte2.html" rel="canonical" />
+
+    <meta name="description" content="la verità dietro l'aneddoto">
+
+    <meta name="author" content="Alessio Gaimarri">
+
+    <meta name="tags" content="Archimede">
+    <meta name="tags" content="Galileo">
+    <meta name="tags" content="la bilancetta">
+    <meta name="tags" content="idrostatica">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="selosai"/>
+<meta property="og:title" content="il problema della corona (II)"/>
+<meta property="og:description" content="la verità dietro l'aneddoto"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./archimede_parte2.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-08-11 10:05:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/alessio-gaimarri.html">
+<meta property="article:section" content="fisica"/>
+<meta property="article:tag" content="Archimede"/>
+<meta property="article:tag" content="Galileo"/>
+<meta property="article:tag" content="la bilancetta"/>
+<meta property="article:tag" content="idrostatica"/>
+<meta property="og:image" content="./images/corona2.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "il problema della corona (II)",
+  "headline": "il problema della corona (II)",
+  "datePublished": "2018-08-11 10:05:00+02:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Alessio Gaimarri",
+    "url": "./author/alessio-gaimarri.html"
+  },
+  "image": "./images/corona2.jpg",
+  "url": "./archimede_parte2.html",
+  "description": "la verità dietro l'aneddoto"
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="./pages/about.html">Chi sono</a></li>
+              <li role="presentation"><a href="./pages/archivio.html">Archivio</a></li>
+              <li role="presentation"><a href="./pages/missione.html">Missione</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="./" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">il problema della corona (II)</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="./author/alessio-gaimarri.html">Alessio Gaimarri</a>
+            | <time datetime="sab 11 agosto 2018">sab 11 agosto 2018</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('./images/corona2.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <div class="section" id="la-bilancetta">
+<h2>La bilancetta</h2>
+<p>Forse non tutti sanno che Galileo era un appassionato lettore delle opere di Archimede, <a class="footnote-reference" href="#id10" id="id1">[1]</a>
+e che nella sua prima opera scientifica in volgare <em>&quot;La bilancetta&quot;</em>, <a class="footnote-reference" href="#id11" id="id2">[2]</a>
+descrive un metodo alternativo a quello visto nella <a class="reference external" href="./archimede.html">prima parte</a>
+di questo articolo per risolvere il problema della corona.</p>
+<p>Ma perché Galileo non era convinto della versione data da Vitruvio?
+Le obiezioni mosse sono due. La prima è di tipo qualitativo:</p>
+<blockquote class="epigraph">
+&quot;par cosa, per così dirla, molto grossa e lontana dall'esquisitezza&quot;</blockquote>
+<p>il ragionamento alla base del procedimento gli sembra troppo elementare.
+È quasi grottesco pensare che per un fatto tanto banale, come quello
+per cui immergendo un corpo in una vasca il livello dell'acqua al suo interno sale, il matematico si
+sia lanciato nudo per le strade di Siracusa gridando Eureka! Come invece sembra voler far credere Vitruvio.</p>
+<p>Persino i corvi,  come potete vedere, hanno un'ottima padronanza del concetto. <a class="footnote-reference" href="#id17" id="id3">[3]</a></p>
+<div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<img alt="corvo" src="images/Corvo.gif" style="width: 720px; height: auto; max-width: 100%;">
+<p class="caption">Un corvo è in grado di sfruttare lo stesso principio per procurarsi del cibo.</p>
+</div><p>La seconda è invece di tipo quantitativo e non lascia scampo:</p>
+<blockquote class="epigraph">
+&quot;tal modo era in tutto fallace e privo di quella esattezza che si richiede nelle cose matematiche&quot;</blockquote>
+<p>Galileo aveva capito che i volumi d'acqua che Archimede avrebbe dovuto misurare erano semplicemente
+troppo piccoli per il metodo di misurazione scelto.</p>
+</div>
+<div class="section" id="facciamo-qualche-calcolo">
+<h2>Facciamo qualche calcolo</h2>
+<p>Per prima cosa cerchiamo di capire come erano fatte le corone votive dell'epoca.
+Rifacendoci ai reperti recuperati dagli archeologi sappiamo che nessuna di queste superava il kilogrammo.</p>
+<div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<img alt="corona votiva"  src="https://media-cdn.tripadvisor.com/media/photo-s/0a/12/d3/39/the-archaeological-museum.jpg" style="width: 720px; height: auto; max-width: 100%;" />
+<p class="caption">esempio di corona votiva greca conservata al
+<a target="_blank" href="https://www.tripadvisor.it/LocationPhotoDirectLink-g189473-d243223-i169005881-Archaeological_Museum_of_Thessaloniki-Thessaloniki_Thessaloniki_Region_Ce.html#169005881" >
+Museo archeologico di Thessaloniki</a>.
+</p>
+</div><p>Prendendo come esempio quella ritrovata nella tomba di un altro re, ipotizziamo per la corona
+una massa di 700 grammi. <a class="footnote-reference" href="#id12" id="id4">[4]</a></p>
+<blockquote class="epigraph">
+<center>
+<span id="mCorona">...</span>
+</center>
+</blockquote><p>Noti i valori delle densità di oro e argento</p>
+<blockquote class="epigraph">
+<center>
+<span id="denOro">...</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span id="denArg">...</span>
+</center>
+</blockquote><p>possiamo ricavare i volumi dei blocchi utilizzati da Archimede nel racconto di Vitruvio:</p>
+<blockquote class="epigraph">
+<center>
+<p id="VolOro">...</p>
+<p id="VolArg">...</p>
+</center>
+</blockquote><p>se li immaginiamo di forma sferica, quello d'oro avrà le stesse dimensioni di una pallina
+da ping pong, mentre quella d'argento sarà di poco più grande.</p>
+<blockquote class="epigraph">
+<center>
+<p id="Vsfera">...</p>
+</center>
+</blockquote><div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<img src="images/sfereOroArgento.png" alt="sfere oro e argento" style="width: 720px; height: auto; max-width: 100%;" />
+<p class="caption">
+
+<span id="Roro"> </span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;<span  id="Rarg"></span>
+
+</p>
+<p class="caption"><span id="Voro_cmcubi"> </span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;<span  id="Varg_cmcubi"></span></p>
+</div><p>L'aumento del livello dell'acqua causato dall'immersione di questi volumi in una vasca di dimensioni
+appena sufficienti per immergere la corona, che ipotizziamo abbia un'imboccatura quadrata di lato
+l = 32 cm, sarà dato da:</p>
+<blockquote class="epigraph">
+<center>
+<p id="dh_oro">...</p>
+
+<p id="dh_arg">...</p>
+</center>
+</blockquote><p>anche ipotizzando una vasca diversa, più alta e stretta, con una imboccatura rettangolare
+(32 cm x 10 cm) il dislivello sarebbe comunque nell'ordine del mm. <a class="footnote-reference" href="#id18" id="id5">[5]</a></p>
+<p>Dunque è evidente che il metodo per la misurazione dei volumi per immersione
+non è abbastanza sensibile per distinguere con la dovuta precisione i valori dei tre volumi coinvolti
+nel ragionamento.</p>
+</div>
+<div class="section" id="il-principio-di-archimede">
+<h2>il principio di Archimede</h2>
+<p>Galileo, dopo aver esposto i suoi dubbi, prosegue dicendo:</p>
+<blockquote class="epigraph">
+mi è venuto in mente un modo che esquisitissimamente risolve il nostro quesito:
+il qual modo crederò io esser l'istesso che usasse Archimede, atteso che, oltre
+all'esser esattissimo, dipende ancora da dimostrazioni ritrovate dal medesimo
+Archimede</blockquote>
+<p>In particolare la dimostrazione che sfrutterà è la seguente:</p>
+<blockquote class="epigraph">
+<p>&quot;un solido più pesante di un fluido, se collocato in esso, discenderà in fondo al
+fluido e se si peserà il solido nel fluido, risulterà più leggero del suo vero peso,
+e la differenza sarà uguale al peso del fluido spostato&quot;. <a class="footnote-reference" href="#id13" id="id6">[6]</a></p>
+<p><strong>[Archimede - &quot;Galleggianti&quot; Lib. I, Proposizione 7]</strong></p>
+</blockquote>
+<p>caso particolare dell'enunciato più generale, oggi conosciuto proprio come <strong>principio di Archimede</strong>:</p>
+<blockquote class="epigraph">
+&quot;un corpo immerso in un fluido riceve una spinta verso l'alto pari al peso del volume del fluido spostato&quot;</blockquote>
+<p>In termini quantitativi tale forza può essere espressa, utilizzando la definizione
+del peso di un corpo come il prodotto della massa per l'accelerazione gravitazionale g:</p>
+<blockquote class="epigraph">
+<center>
+<p id="fPeso">...</p>
+
+
+<p> <span id="gi">...</span>&nbsp; &nbsp;&nbsp;&nbsp; (valore medio sulla superficie terrestre)</p>
+
+</center>
+</blockquote><p>e della densità di un corpo con la formula:</p>
+<blockquote class="epigraph">
+<center>
+<span id="spinta">...</span>
+</center>
+</blockquote></div>
+<div class="section" id="il-metodo-di-galileo">
+<h2>il metodo di Galileo</h2>
+<p>Il procedimento ideato da Galileo si basa sul principio di Archimede e prevede l'utilizzo di una bilancia a due bracci, <a class="footnote-reference" href="#id14" id="id7">[7]</a>
+come quella qui raffigurata, che utilizzeremo come riferimento durante la spiegazione:</p>
+<div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<img alt="illustrazione bilancia idrostatica" src="images/bilancetta.jpg" style="width: 720px; height: auto; max-width: 100%;">
+<p class="caption">Illustrazione della bilancetta idrostatica di Galileo</p>
+<div class="legend">
+</div>
+</div><p>per prima cosa si procede alla pesatura in aria dei due blocchi di argento e oro.
+Nell'ipotesi che abbiano la stessa massa, applicati all'estremo <strong>b</strong>, essi saranno bilanciati
+dallo stesso identico contrappeso <strong>d</strong> posto all'estremo <strong>a</strong> della bilancia. La condizione
+di equilibrio vuole che i prodotti delle due forze per la distanza dal fulcro del loro punto di applicazione
+siano uguali:</p>
+<blockquote class="epigraph">
+<center>
+<p id="bilanciaEqIn">...</p>
+</center>
+</blockquote><p>se le due masse sono uguali avranno lo stesso peso, quindi per la condizione di equilibrio
+avremo:</p>
+<blockquote class="epigraph">
+<center>
+<p id="dedu1">...</p>
+</center>
+</blockquote><p>Ora se si immerge il blocco di metallo in acqua, per effetto del principio di Archimede, la forza agente
+su <strong>b</strong> diminuirà di un valore proporzionale al volume del corpo immerso, determinando così la rottura
+dell'equilibrio iniziale e facendo pendere la bilancia dalla parte del contrappeso.</p>
+<p>Per riottenere l'equilibrio dovremo avvicinare il contrappeso al fulcro <strong>c</strong> della bilancia,
+fino a trovare il punto, (<strong>e</strong> nel caso dell'oro), per cui si avrà:</p>
+<blockquote class="epigraph">
+<center>
+<span id="equilibrio">...</span>
+</center>
+</blockquote><p>Dal momento che il volume occupato dall'argento è maggiore di quello occupato dall'oro, la spinta di
+Archimede sarà maggiore nel primo caso, e pertanto per ristabilire l'equilibrio della bilancia
+si dovrà spostare il contrappeso ancora più vicino al fulcro. (punto <strong>f</strong> dell'illustrazione).</p>
+<p>Nel caso di una corona contraffatta l'equilibrio verrà ristabilito in un punto <strong>g</strong> compreso
+tra quelli individuati per i blocchi di metallo puro (<strong>e</strong>, <strong>f</strong>) e la frazione d'argento sarà data:</p>
+<blockquote class="epigraph">
+&quot;dalla proporzione nella quale verrà divisa la distanza
+EF si averà esquisitamente la proporzione dei due metalli, che
+tal misto compongono.&quot;</blockquote>
+<p>e nel dettaglio:</p>
+<blockquote class="epigraph">
+l'oro e  l'argento, che compongono tal misto, sono tra di loro nella medesima proporzione che le distanze
+FG, GE. Ma ci è da avvertire che la distanza GF, terminata nel segno dell'argento, ci denoterà la
+quantità dell'oro, e la distanza GE, terminata nel segno dell'oro, ci dimostrerà la quantità dell'argento: di
+maniera  che  se FG tornerà  doppia  di GE, il tal misto sarà due d'oro ed uno di argento. E
+col medesimo  ordine  procedendo  nell'esamine  di  altri  misti, si troverà esquisitamente la quantità
+dei semplici metalli.</blockquote>
+</div>
+<div class="section" id="quanto-e-preciso">
+<h2>Quanto è preciso?</h2>
+<p>Galileo conclude l'opera dando istruzioni dettagliate su come costruire la bilancia. E indica subito al lettore su quale
+parte intervenire per migliorarne la sensibilità:</p>
+<blockquote class="epigraph">
+Per fabricar dunque la bilancia, piglisi un regolo lungo almeno due braccia, e quanto più
+sarà lungo più sarà esatto l'istrumento</blockquote>
+<p>Proviamo a stimare la sensibilità della bilancia ipotizzando che ciascun braccio sia lungo 60 cm, <a class="footnote-reference" href="#id15" id="id8">[8]</a>
+e riutilizzando i valori dei volumi dei blocchi di metallo ricavati nell'ipotesi di una corona di massa 0,7 kg.
+La forza peso in aria iniziale sarà uguale per tutte le masse in gioco:</p>
+<blockquote class="epigraph">
+<center>
+<p id="pesi_in_aria">...</p>
+</center>
+</blockquote><p>il valore della spinta di Archimede dipenderà invece dai volumi dei blocchi, già calcolati, e
+dalla densità dell'acqua in cui li immergiamo:</p>
+<blockquote class="epigraph">
+<center>
+<span id="densitaAcquaRT">...</span>&nbsp;&nbsp;&nbsp;<span>(alla temperatura di 22° C)</span>
+</center>
+</blockquote><blockquote class="epigraph">
+<center>
+<p id="SpinteArchi">...</p>
+<p id="SpinteArchi2">...</p>
+<p id="SpinteArchiArge">...</p>
+<p id="SpinteArchiArge2">...</p>
+</center>
+</blockquote><p>imponendo la condizione di equilibrio ricavo i segmenti EC e FC:</p>
+<blockquote class="epigraph">
+<center>
+<p id="ec">...</p>
+<p id="fc">...</p>
+</center>
+</blockquote><p>ponendo uguale a x la frazione di argento, possiamo scrivere la Forza di Archimede agente sulla corona:</p>
+<blockquote class="epigraph">
+<center>
+<p id="FarchiCorona">...</p>
+
+</center>
+</blockquote><p>ipotizzando che la sensibilità nel misurare le lunghezze fosse di 4 mm, tenendo conto dello
+spessore dei fili, con una bilancia come questa si potrebbero rilevare frazioni d'argento pari a: <a class="footnote-reference" href="#id16" id="id9">[9]</a></p>
+<blockquote class="epigraph">
+<center>
+<p id="percRilevabile">...</p>
+
+</center>
+</blockquote><p>Come detto, utilizzando una bilancia con bracci di lunghezza maggiore la frazione minima di argento rilevabile
+dallo strumento diminuirà senza dover migliorare la sensibilità nella misura delle lunghezze.</p>
+</div>
+<div class="section" id="note">
+<h2>Note</h2>
+<table class="docutils footnote" frame="void" id="id10" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>nei <em>&quot;Discorsi e dimostrazioni matematiche intorno a due nuove scienze&quot;</em>, [Giornata I, 86], pubblicato a
+Leida nel 1638, ribadisce la sua stima nei confronti dell'illustre predecessore, quando fa dire a Salviati:
+<em>&quot;mi rese credibile ogni miracolo, che si legge in più scrittori, la  lettura  de  i  libri  dell'istesso
+Archimede, già da me con infinito stupore letti e studiati&quot;</em>.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id11" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>scritta nel 1586, a soli 22 anni, in volgare anziché in latino, per ottenere la
+cattedra di matematica all'università di Pisa.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id17" rules="none">
+<colgroup>
+<col class="label"><col>
+</colgroup>
+<tbody valign="top">
+<tr>
+<td class="label"><a class="fn-backref" href="#id3">[3]</a></td>
+<td>
+<p>senza offesa ovviamente ...  😰</p>
+<iframe src="https://giphy.com/embed/Kw0bCrsbzvJ84" width="480" height="241" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+<p><em>Gli uccelli (The Birds), regia di Alfred Hitchcock, 1963</em></p>
+</td>
+</tr>
+</tbody>
+</table><table class="docutils footnote" frame="void" id="id12" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id4">[4]</a></td><td>nella tomba di Filippo II, padre di Alessandro Magno, ne è stata ritrovata una di 714 g.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id18" rules="none">
+<colgroup>
+<col class="label"><col>
+</colgroup>
+<tbody valign="top">
+<tr>
+<td class="label"><a class="fn-backref" href="#id5">[5]</a></td>
+<td>
+ <center>
+  <p id="dh_oro_rett">...</p>
+
+ <p id="dh_arg_rett">...</p>
+ </center>
+</td>
+</tr>
+</tbody>
+</table><table class="docutils footnote" frame="void" id="id13" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id6">[6]</a></td><td>ho leggermente modificato la traduzione tratta dall'edizione UTET delle opere di Archimede
+per renderla più chiara. L'originale è qui riportato:
+<em>&quot;Le [grandezze] più pesanti del liquido, abbandonate nel liquido, sono trasportate
+verso il basso, fino al fondo, e saranno tanto più leggiere nel liquido, quanto è
+il peso del liquido avente tale volume quanto è il volume della grandezza solida.&quot;</em></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id14" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id7">[7]</a></td><td>Il plurale maschile bracci si usa quando indica oggetti o parti di oggetti che sporgono o si
+prolungano a somiglianza d’un braccio. esempi: <em>&quot;i bracci della croce, candelabro a sei bracci,
+i bracci di un edificio, ...&quot;</em>. Il plurale femminile braccia si usa quando ci si riferisce
+agli arti superiori del corpo umano, in senso proprio o figurato.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id15" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id8">[8]</a></td><td>Ipotizzando che l'unità di misura utilizzata da Galileo fosse il <em>braccio fiorentino</em> equivalente a 58,3 cm di oggi.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id16" rules="none">
+<colgroup>
+<col class="label"><col>
+</colgroup>
+<tbody valign="top">
+<tr>
+<td class="label"><a class="fn-backref" href="#id9">[9]</a></td>
+<td>
+ <center>
+  <p >la condizione da cui ho ricavato la x è la seguente:</p>
+  <p id="condx">...</p>
+   <p >da cui ricavo</p>
+    <p id="condx2">...</p>
+      <p id="condx3">...</p>
+        <p id="condx4">...</p>
+        <p id="condx5">...</p>
+ </center>
+</td>
+</tr>
+</tbody>
+</table><table class="docutils footnote" frame="void" id="id16" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id9">[9]</a></td><td></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id17" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id3">[3]</a></td><td></td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id18" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id5">[5]</a></td><td></td></tr>
+</tbody>
+</table>
+<div class="section" id="bibliografia">
+<h3>Bibliografia</h3>
+<ul class="simple">
+<li>Galileo Galilei, <a class="reference external" href="https://www.liberliber.it/mediateca/libri/g/galilei/la_bilancetta/pdf/la_bil_p.pdf" target="_blank">La bilancetta</a>, 1586</li>
+<li>Frajese A., Opere di Archimede, UTET, 1974</li>
+<li>Boyer C.B., <a class="reference external" href="https://amzn.to/2mZAugr" target="_blank">Storia della matematica</a>, Mondadori, 2017</li>
+</ul>
+</div><div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = "https://alessiogaimarri.github.io/selosai/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "archimedeP2"; // Replace PAGE_IDENTIFIER (lo slug del post)
+ };
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://selosai.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//selosai.disqus.com/count.js" async></script><p style="font-size:90%;">NOTA: i link a pagine esterne sono stati controllati l'ultima volta il 5 luglio 2018</p>
+<link rel="stylesheet" type="text/css" href="./css/archimede_p2.css">
+<script src="./js/archimede_p2.js"></script></div>
+
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" 
+                       href="https://twitter.com/share?text=il problema della corona (II)&amp;url=https://alessiogaimarri.github.io/selosai/archimede_parte2.html" 
+                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alessiogaimarri.github.io/selosai/archimede_parte2.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://alessiogaimarri.github.io/selosai/archimede_parte2.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="./tag/archimede.html">Archimede</a><a href="./tag/galileo.html">Galileo</a><a href="./tag/la-bilancetta.html">la bilancetta</a><a href="./tag/idrostatica.html">idrostatica</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+      
+      <!-- clicky badge-->
+      <a title="Real Time Web Analytics" href="http://clicky.com/101130897"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+        <script src="//static.getclicky.com/js" type="text/javascript"></script>
+        <script type="text/javascript">try{ clicky.init(101130897); }catch(e){}</script>
+        <noscript><p>
+        <img alt="Clicky" id="clicky" src="//in.getclicky.com/101130897ns.gif" /></p></noscript>
+
+
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="./theme/js/script.js"></script>
+
+</body>
+</html>
