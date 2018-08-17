@@ -152,7 +152,8 @@
 propone ai suoi lettori il seguente problema:</p>
 <blockquote class="epigraph">
 Quante coppie di conigli verranno prodotte in un anno, a partire da un'unica coppia
-se ogni mese ciascuna coppia dà alla luce una nuova coppia che diventa produttiva a partire dal secondo mese?</blockquote>
+se ogni mese ciascuna coppia dà alla luce una nuova coppia che diventa produttiva a
+partire dal secondo mese?</blockquote>
 <p>se indichiamo con la lettera <strong>c</strong> una coppia di conigli appena nati e con <strong>C</strong> una coppia
 di conigli adulti, possiamo rappresentare le regole di crescita e riproduzione in questo modo:</p>
 <table id="regole">
@@ -164,9 +165,7 @@ di conigli adulti, possiamo rappresentare le regole di crescita e riproduzione i
     <tr>
         <td>ogni coppia adulta genera una nuova coppia:</td>
         <td style="font-weight:bold; text-align:center;" > C &rarr; C+c</td></tr>
-</table><p>ora possiamo risolvere il problema applicando queste regole
-alla coppia di conigli iniziale <strong>c</strong>, e calcolando ad ogni iterazione
-il totale delle coppie.</p>
+</table><p>e trovare la soluzione applicandole alla coppia di conigli iniziale <strong>c</strong>.</p>
 <div id="contenitore">
      <center>
      <div id="pulsantiera">
@@ -186,27 +185,24 @@ il totale delle coppie.</p>
         <td style="text-align:center;">1</td>
         </tr>
     </table>
-</div><p>la soluzione trovata da Leonardo, 377 coppie, coincide con il valore che troviamo
-in corrispondenza del 13° mese solo perché, diversamente da lui, siamo partiti dalla coppia appena nata <strong>c</strong>
-e non da quella adulta <strong>C</strong>. <a class="footnote-reference" href="#id10" id="id3">[3]</a></p>
-<p>Osservando con attenzione la successione dei totali
-ci si accorge che, a partire dal terzo, ciascun termine è la somma dei due che
-lo precedono.</p>
-<center>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, ...</center><p>Trovata la soluzione Leonardo suggerisce al lettore la possibilità di proseguire
-<em>&quot;per un numero infinito di mesi&quot;</em>, definendo così la successione ricorsiva,
-che oggi porta il suo nome. <a class="footnote-reference" href="#id8" id="id4">[4]</a></p>
+</div><p>la soluzione riportata nel testo, 377 coppie, coincide con il valore che troviamo
+in corrispondenza del 13° mese solo perché, diversamente dall'autore,
+siamo partiti da una coppia di conigli appena nati anziché da una coppia di adulti. <a class="footnote-reference" href="#id10" id="id3">[3]</a></p>
+<p>Se si osserva con attenzione la successione dei totali, mese dopo mese, ci si accorge
+che ciascun termine dopo i primi due è dato dalla somma dei due che lo precedono.</p>
+<center>1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, ...</center><p>Leonardo, suggerendo al lettore di proseguire <em>&quot;per un numero infinito di mesi&quot;</em>,
+definisce di fatto la successione ricorsiva oggi nota come <strong>successione di Fibonacci</strong>. <a class="footnote-reference" href="#id8" id="id4">[4]</a></p>
 <blockquote class="epigraph">
 <center><span id="mykatex1">...</span>&nbsp;,&nbsp;
 <span id="mykatex2">...</span>&nbsp;,&nbsp;
 <span id="mykatex3">...</span>&nbsp;&nbsp;
 <span id="mykatex4">...</span></center>
-</blockquote><p>ovviamente la crescita di una popolazione di conigli non seguirà esattamente
-l'andamento della successione, dato che il matematico pisano ha
-scelto il caso ideale di conigli che non invecchiano, in un ambiente privo di predatori
-o malattie e con una quantità di spazio e cibo illimitati.
-Nella realtà l'unica concessione possibile a queste fantasiose ipotesi è un ambiente
-privo di predatori. Se siete curiosi di
-vederne gli effetti date un'occhiata all'isola giapponese di Ōkunoshima. <a class="footnote-reference" href="#id9" id="id5">[5]</a></p>
+</blockquote><p>Nel mondo reale la crescita di una popolazione di conigli seguirà un andamento del tutto diverso
+da quello previsto dalla successione, che rappresenta il caso ideale di conigli che non invecchiano,
+in un ambiente privo di predatori o malattie e con una quantità di spazio e cibo illimitati.
+L'unica concessione possibile a queste fantasiose ipotesi è un ambiente privo di predatori.
+Se siete curiosi di vedere quali effetti possa scatenare questa situazione date un'occhiata
+all'isola giapponese di Ōkunoshima. <a class="footnote-reference" href="#id9" id="id5">[5]</a></p>
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/2ixspJ-SnMk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><div class="section" id="note">
 <h3>NOTE</h3>
 <table class="docutils footnote" frame="void" id="id6" rules="none">
@@ -309,7 +305,7 @@ e accelerando il processo di erosione e desertificazione del territorio.</td></t
 <li>Fibonacci numbers on The online encyclopedia of integer sequences - <a class="reference external" href="https://oeis.org/search?q=1%2C1%2C2%2C3%2C5%2C8&amp;language=english&amp;go=Search">OEIS</a></li>
 <li>Zachos E., This Island Is Overrun With Rabbits - <a class="reference external" href="https://news.nationalgeographic.com/2017/12/rabbit-island-japan-overrun-tourism-spd/" target="_blank">National geographic</a></li>
 </ul>
-<p style="font-size:90%;">NOTA: i link a pagine esterne sono stati controllati l'ultima volta il 22 giugno 2018</p><div id="disqus_thread"></div>
+<p style="font-size:90%;">NOTA: i link a pagine esterne sono stati controllati l'ultima volta il 17 agosto 2018</p><div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
 this.page.url = "https://alessiogaimarri.github.io/selosai/";  // Replace PAGE_URL with your page's canonical URL variable
