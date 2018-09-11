@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- P5.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+   <!-- katex -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+  <!--ketex -->
+  
+
+  <title>l'arte di prendere appunti</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="./" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="./theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="./theme/css/code_blocks/monokai.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="./appunti.html" rel="canonical" />
+
+    <meta name="description" content="come costruire mappe mentali e concettuali">
+
+    <meta name="author" content="Alessio Gaimarri">
+
+    <meta name="tags" content="metodo di studio">
+    <meta name="tags" content="mappe mentali">
+    <meta name="tags" content="mappe concettuali">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="selosai"/>
+<meta property="og:title" content="l'arte di prendere appunti"/>
+<meta property="og:description" content="come costruire mappe mentali e concettuali"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./appunti.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-09-11 09:50:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/alessio-gaimarri.html">
+<meta property="article:section" content="metodo di studio"/>
+<meta property="article:tag" content="metodo di studio"/>
+<meta property="article:tag" content="mappe mentali"/>
+<meta property="article:tag" content="mappe concettuali"/>
+<meta property="og:image" content="./images/appunti.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "l'arte di prendere appunti",
+  "headline": "l'arte di prendere appunti",
+  "datePublished": "2018-09-11 09:50:00+02:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Alessio Gaimarri",
+    "url": "./author/alessio-gaimarri.html"
+  },
+  "image": "./images/appunti.jpg",
+  "url": "./appunti.html",
+  "description": "come costruire mappe mentali e concettuali"
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="./pages/about.html">Chi sono</a></li>
+              <li role="presentation"><a href="./pages/archivio.html">Archivio</a></li>
+              <li role="presentation"><a href="./pages/missione.html">Missione</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="./" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">l'arte di prendere appunti</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="./author/alessio-gaimarri.html">Alessio Gaimarri</a>
+            | <time datetime="mar 11 settembre 2018">mar 11 settembre 2018</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('./images/appunti.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>Spesso nei libri di testo sono presenti, alla fine di ciascun capitolo, schemi riassuntivi che dovrebbero
+aiutare lo studente nel rielaborare gli argomenti presentati in maniera esaustiva nelle pagine
+precedenti. Tuttavia utilizzare schemi costruiti da altri il più delle volte risulta essere poco
+efficace o addirittura frustrante.</p>
+<div class="contenitore">
+<center>
+<iframe src="https://giphy.com/embed/GUiKSvedM5daE" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</center>
+</div><p>Una mappa o uno schema risulterà tanto più efficace quanto più sarà il frutto di una elaborazione
+personale di quanto si è studiato. Vediamo come costruire due diversi tipi di mappe
+il cui obbiettivo <a class="footnote-reference" href="#id4" id="id1">[1]</a> comune è quello di organizzare in modo efficace le informazioni apprese durante lo studio.</p>
+<div class="section" id="creare-una-mappa-mentale">
+<h2>Creare una mappa mentale</h2>
+<p>La mappa mentale è qualcosa di personale che dà modo a chi la crea di riorganizzare in modo creativo il contenuto
+di un testo secondo i propri processi mentali e le proprie conoscenze pregresse. Deve essere più <strong>evocativa</strong>
+che descrittiva. Non deve concentrarsi sulle definizioni e i contenuti, ma sulle libere associazioni  tra concetti
+e parole chiave.</p>
+<p>Prima di tutto assicuratevi di avere un foglio bianco, meglio se di grandi dimensioni, e qualche pennarello.</p>
+<ol class="arabic simple">
+<li>Leggete attentamente il testo sottolineando, se necessario, i passaggi che ritenete fondamentali.</li>
+<li>Individuate qual è il tema centrale e riportatelo al centro del foglio. Potete
+farlo sia mediante un testo che un disegno o entrambi. Siate creativi!</li>
+<li>Fate un elenco di tutti i concetti che associate all'idea centrale.</li>
+<li>Se possibile suddivideteli in categorie a cui darete un nome.</li>
+<li>Collegate ciascun concetto nel vostro elenco al nucleo centrale mediante delle frecce,
+rispettando le suddivisioni che avete individuato.</li>
+</ol>
+<div class="section" id="esempio">
+<h3>Esempio</h3>
+<p></p>
+<div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<img alt="corvo" src="images/appunti/mappaMentale.jpg" style="width: 720px; height: auto; max-width: 100%;">
+<p class="caption"><b>Esempio di mappa mentale sugli stati della materia</b></p>
+</div></div>
+<div class="section" id="valutazione">
+<h3>valutazione</h3>
+<p>Per valutare l'efficacia di una mappa, può essere utile
+fare un confronto con gli obiettivi che il suo utilizzo
+si propone di raggiungere:</p>
+<ol class="arabic">
+<li><p class="first">favorire la memorizzazione degli elementi secondari collegati all'idea principale.</p>
+<blockquote class="epigraph">
+<p>&quot;Mi aiuta a ricordare meglio i dettagli dell'argomento principale?&quot;</p>
+</blockquote>
+</li>
+<li><p class="first">aiutare, nel corso dell'esposizione orale, nel recupero delle informazioni e
+nell'impartire loro un ordine logico-temporale.</p>
+<blockquote class="epigraph">
+<p>&quot;Ripercorrendo mentalmente la mappa si dovrebbe riuscire a costruire un discorso ricco e dettagliato sul tema&quot;</p>
+</blockquote>
+</li>
+<li><p class="first">fornire un metodo di autovalutazione della comprensione e della memorizzazione di quanto
+studiato o letto.</p>
+<blockquote class="epigraph">
+<p>&quot;Se mi accorgo di avere difficoltà nell'associare concetti al tema centrale, o addirittura di
+non riuscire ad individuare nemmeno quest'ultimo, vuol dire che la prima lettura del testo non è stata fatta
+con la dovuta attenzione o che quanto studiato non è stato memorizzato&quot;</p>
+</blockquote>
+</li>
+<li><p class="first">utilizzare il pensiero visivo per affiancare e rafforzare il pensiero logico-verbale.</p>
+<blockquote class="epigraph">
+<p>&quot;se rappresento con un disegno il teorema di Pitagora rafforzerò il legame tra i simboli utilizzati per esprimerlo,
+ossia la formula, e i concetti geometrici a cui fanno riferimento&quot;</p>
+</blockquote>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="creare-una-mappa-concettuale">
+<h2>Creare una mappa concettuale</h2>
+<p>La mappa concettuale è un modo per raffigurare l'organizzazione interna di un tema complesso
+come una rete di relazioni tra concetti. All'opposto della mappa mentale sarà più descrittiva e
+incentrata sui contenuti. Non si usano disegni o colori ma solo testi, linee e formule.</p>
+<p>Come prima, assicuratevi di avere un foglio bianco, meglio se di grandi dimensioni.</p>
+<ol class="arabic">
+<li><p class="first">Leggete attentamente il testo sottolineando, se necessario, i passaggi che ritenete fondamentali.</p>
+</li>
+<li><p class="first">Individuate qual è il tema centrale e riportatelo in un rettangolo nella parte superiore del foglio.</p>
+</li>
+<li><p class="first">a partire da quello scrivete tutte le cose che conoscete al riguardo o che sono ad esse collegate sottoforma
+di brevi frasi.</p>
+</li>
+<li><p class="first">ciascuna di essa verrà rappresentata sul foglio con una freccia in questo modo:</p>
+<blockquote class="epigraph">
+<center>
+Pressione<span id="fsinistra">...</span> la sua unità di misura è il <span id="fdestra">...</span>Pascal
+</center>
+</blockquote></li>
+</ol>
+<div class="section" id="id2">
+<h3>Esempio</h3>
+<p></p>
+<div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<img alt="corvo" src="images/appunti/mappaConcettuale.jpg" style="width: 720px; height: auto; max-width: 100%;">
+<p class="caption"><b>Esempio di mappa concettuale sulla pressione nei fluidi</b></p>
+</div></div>
+<div class="section" id="id3">
+<h3>valutazione</h3>
+<p>Gli obbiettivi per cui si costruisce una mappa concettuale sono i seguenti:</p>
+<ol class="arabic">
+<li><p class="first">creare connessioni tra vecchie e nuove informazioni.</p>
+<blockquote class="epigraph">
+<p>&quot;se ad esempio nella mappa che sto costruendo compare un termine che già conosco, ad esempio la densità,
+aggiungerò un ramo con la sua definizione&quot;</p>
+</blockquote>
+</li>
+<li><p class="first">rafforzare i legami logici e di causa effetto tra concetti.</p>
+<blockquote class="epigraph">
+<p>&quot;la mappa dovrebbe aiutarvi nel dedurre le conseguenze logiche di una proposizione. Ad esempio: <em>'se vale
+il principio di Archimede allora ...'</em> &quot;</p>
+</blockquote>
+</li>
+<li><p class="first">comprendere l'organizzazione interna e la struttura di un argomento complesso.</p>
+<blockquote class="epigraph">
+<p>&quot;Alcuni argomenti per essere compresi richiedono l'utilizzo di tutta una serie di concetti più elementari a cui
+fanno riferimento. Ad esempio quando si studiano le forze dobbiamo avere ben chiaro la loro natura di grandezze
+vettoriali e ricorrere quindi al concetto matematico di vettore. La mappa ci può aiutare ad esplicitare
+tale legame e a rafforzarlo&quot;</p>
+</blockquote>
+</li>
+<li><p class="first">memorizzazione delle conoscenze secondo uno schema logico</p>
+<blockquote class="epigraph">
+<p>&quot;è più facile memorizzare concetti legati tra loro secondo un qualche ordine logico, che la mappa aiuta
+a mettere in evidenza&quot;</p>
+</blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="note">
+<h3>NOTE</h3>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Obiettivo o obbiettivo? vedi il <a class="reference external" href="http://forum.accademiadellacrusca.it/forum_5/interventi/910.shtml.html">link</a>.</td></tr>
+</tbody>
+</table>
+<div class="section" id="bibliografia">
+<h3>Bibliografia</h3>
+<ul class="simple">
+<li>AA. VV., "psicologia dei processi di apprendimento/insegnamento", EDUCatt, 2018</li>
+</ul>
+</div> <div id="disqus_thread"></div>
+ <script>
+ var disqus_config = function () {
+ this.page.url = "https://alessiogaimarri.github.io/selosai/";  // Replace PAGE_URL with your page's canonical URL variable
+ this.page.identifier = "appunti"; // Replace PAGE_IDENTIFIER (lo slug del post)
+  };
+
+ (function() { // DON'T EDIT BELOW THIS LINE
+ var d = document, s = d.createElement('script');
+ s.src = 'https://selosai.disqus.com/embed.js';
+ s.setAttribute('data-timestamp', +new Date());
+ (d.head || d.body).appendChild(s);
+ })();
+ </script>
+ <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+ <script id="dsq-count-scr" src="//selosai.disqus.com/count.js" async></script>
+
+<!--<p style="font-size:90%;">NOTA: i link a pagine esterne sono stati controllati l'ultima volta il 22 luglio 2018</p>-->
+<link rel="stylesheet" type="text/css" href="./css/appunti.css">
+<script src="./js/appunti.js"></script></div>
+</div>
+
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" 
+                       href="https://twitter.com/share?text=l'arte di prendere appunti&amp;url=https://alessiogaimarri.github.io/selosai/appunti.html" 
+                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alessiogaimarri.github.io/selosai/appunti.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://alessiogaimarri.github.io/selosai/appunti.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="./tag/metodo-di-studio.html">metodo di studio</a><a href="./tag/mappe-mentali.html">mappe mentali</a><a href="./tag/mappe-concettuali.html">mappe concettuali</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+      
+      <!-- clicky badge-->
+      <a title="Real Time Web Analytics" href="http://clicky.com/101130897"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+        <script src="//static.getclicky.com/js" type="text/javascript"></script>
+        <script type="text/javascript">try{ clicky.init(101130897); }catch(e){}</script>
+        <noscript><p>
+        <img alt="Clicky" id="clicky" src="//in.getclicky.com/101130897ns.gif" /></p></noscript>
+
+
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="./theme/js/script.js"></script>
+
+</body>
+</html>
