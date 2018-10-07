@@ -267,88 +267,138 @@ trovare le incognite del problema.</p>
 <div class="section" id="esempi">
 <h2>Esempi</h2>
 <p></p>
+
 <div class="figure" style="width: 800px; height: auto; max-width: 100%;">
 <img alt="work in progress..." src="images/trigo/wip.gif" style="width: 720px; height: auto; max-width: 100%;">
 </div></div>
-<div class="section" id="funzioni-goniometriche">
-<h2>Funzioni goniometriche</h2>
-<p>Rivediamo le definizioni delle funzioni goniometriche:</p>
+<div class="section" id="teoremi-sui-triangoli-qualsiasi">
+<h2>Teoremi sui triangoli (qualsiasi)</h2>
 <blockquote class="epigraph">
-<p>Dato un angolo θ in posizione normale, sia P il punto di intersezione del secondo lato
-dell'angolo con la circonferenza goniometrica (ovvero quella avente raggio unitario r = 1 e centrata nell'origine). Chiamiamo:</p>
-<ol class="arabic simple">
-<li><strong>seno</strong> di θ  l'<strong>ordinata</strong> di P;</li>
-<li><strong>coseno</strong> di θ  l'<strong>ascissa</strong> di P;</li>
-<li><strong>tangente</strong> di θ il rapporto tra l'ordinata e l'ascissa di P.</li>
-</ol>
-</blockquote>
+&quot;L'area di un triangolo è uguale alla metà del prodotto delle misure di due lati per il seno dell'angolo compreso&quot;</blockquote>
+<p>Questo risultato può essere ottenuto suddividendo il triangolo in due triangoli rettangoli e applicando il primo teorema.</p>
+<p></p>
+
+<div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<img alt="angolo acutangolo" src="images/trigo/triangle2.gif" style="width: 720px; height: auto; max-width: 100%;">
+</div><p>Se consideriamo la formula dell'area del triangolo in figura,</p>
+<blockquote class="epigraph">
+<center>
+<p>
+ <span id="areaTriangolo">...</span>
+ </p>
+</center>
+</blockquote><p>applicando il primo teorema della trigonometria per i triangoli rettangoli al triangolo BHC, posso
+riscrivere l'altezza CH in funzione dell'angolo β:</p>
+<blockquote class="epigraph">
+<center>
+<p>
+ <span id="altezzaFangolo">...</span>
+ </p>
+</center>
+</blockquote><p>da cui ricavo il risultato previsto dal teorema:</p>
+<blockquote class="epigraph">
+<center>
+<p>
+ <span id="areaTrQualsiasi">...</span>
+ </p>
+</center>
+</blockquote><p>che possiamo generalizzare a tutte le coppie di lati adiacenti, così da ottenere le seguenti
+relazioni:</p>
+<blockquote class="epigraph">
+<center>
+<p>
+ <span id="relazioniATQ">...</span>
+ </p>
+</center>
+</blockquote></div>
+<div class="section" id="teorema-della-corda">
+<h2>Teorema della corda</h2>
+<blockquote class="epigraph">
+&quot;La misura di una corda di una circonferenza è uguale al prodotto della misura del diametro
+per il seno di uno qualunque degli angoli
+alla circonferenza che insistono su uno dei due archi sottesi dalla corda.&quot;</blockquote>
 <p></p>
 <div class="figure" style="width: 800px; height: auto; max-width: 100%;">
-<img alt="rappresentazione funzioni seno e coseno" src="images/trigo/sencos.png" style="width: 720px; height: auto; max-width: 100%;">
-<p class="caption">Rappresentazione del seno e del coseno di un angolo in un sistema cartesiano</p>
-<div class="legend">
-</div>
-</div></div>
-<div class="section" id="gradi-e-radianti">
-<h2>Gradi e radianti</h2>
-<p>Il grado è definito come la trecentosessantesima parte dell'angolo giro.
-Ogni grado viene suddiviso in 60 parti, ciascuna chiamata minuto, indicata con un apice.
-Ogni minuto viene a sua volta suddiviso in 60 parti, ciascuna delle quali è chiamata secondo
-ed è indicata con due apici. Questo sistema di misurazione degli angoli è detto
-<strong>sistema sessagesimale</strong>.</p>
+<img alt="teorema della corda" src="images/trigo/teoremaCorda.jpg" style="width: 720px; height: auto; max-width: 100%;">
+</div><p></p>
 <blockquote class="epigraph">
 <center>
 <p>
- <span>1 angolo giro = 360° </span> &nbsp;&nbsp;&nbsp;&nbsp;
- <span>1° = 60' </span>  &nbsp;&nbsp;&nbsp;&nbsp;
- <span>1' = 60'' </span>
+ <span id="teoremaCorda">...</span>
  </p>
-
 </center>
-</blockquote><p>Nelle discipline scientifiche le misure degli angoli sono espresse in radianti.</p>
+</blockquote></div>
+<div class="section" id="teorema-dei-seni">
+<h2>Teorema dei seni</h2>
 <blockquote class="epigraph">
-La misura di un angolo in radianti (rad) è la misura dell'arco che esso intercetta sulla
-circonferenza goniometrica, una volta che l'angolo sia posto in posizione normale</blockquote>
+&quot;In un triangolo è costante il rapporto fra la misura di ciascun lato e il seno dell'angolo opposto.&quot;</blockquote>
+<blockquote class="epigraph">
+<center>
+<p>
+ <span id="teoremaSeni">...</span>
+ </p>
+</center>
+</blockquote><p>per dimostrare il teorema, basta considerare la circonferenza circoscritta al triangolo e applicare il teorema della corda.
+Così facendo ciascun lato coincide con una corda, la cui misura è data dal prodotto del diametro per il seno dell'angolo
+opposto:</p>
 <p></p>
 <div class="figure" style="width: 800px; height: auto; max-width: 100%;">
-<img alt="radiante circonferenza raggio r" src="images/trigo/radiante.svg" style="width: 720px; height: auto; max-width: 100%;">
-<p class="caption">la misura di un angolo in radianti su una circonferenza di raggio r generica</p>
-<div class="legend">
-</div>
-</div><p>il valore in radianti dell'angolo giro corrisponderà per definizione al valore del perimetro
-dell'intera circonferenza goniometrica:</p>
+<img alt="circonferenza circoscritta al triangolo" src="images/trigo/circ_circoscritta.png" style="width: 720px; height: auto; max-width: 100%;">
+</div><p></p>
 <blockquote class="epigraph">
 <center>
 <p>
- <span >perimetro circonferenza = 2πr</span>
- </p>
-<p>
- <span >angolo giro  = 2π radianti </span> &nbsp; &nbsp; &nbsp;<span >(circonferenza goniometrica r = 1) </span>
- </p>
-</center>
-</blockquote><p>Da questo risultato posso impostare la proporzione che mi permette di passare da una misura
-in gradi a una in radianti e viceversa</p>
-<blockquote class="epigraph">
-<center>
-<p>
- <span id="proporzione"></span>
- </p>
-
-</center>
-</blockquote><p>per alcuni casi particolari riportiamo i valori corrispondenti:</p>
-<blockquote class="epigraph">
-<center>
-<p>
- <span >angolo giro = 360° = 2π (rad)</span>
- </p>
-<p>
- <span >angolo piatto = 180° = π (rad)</span>
+ <span id="dimostrazione_Tseni_1">...</span>
  </p>
  <p>
- <span >angolo retto = 90° = π/2 (rad)</span>
+ <span id="dimostrazione_Tseni_2">...</span>
+ </p>
+ <p>
+ <span id="dimostrazione_Tseni_3">...</span>
  </p>
 </center>
-</blockquote><div id="disqus_thread"></div>
+</blockquote><p>possiamo quindi dedurre l'uguaglianza tra i rapporti:</p>
+<p></p>
+<blockquote class="epigraph">
+<center>
+<p>
+ <span id="dimostrazione_Tseni_fine">...</span>
+ </p>
+
+</center>
+</blockquote></div>
+<div class="section" id="teorema-del-coseno">
+<h2>Teorema del coseno</h2>
+<blockquote class="epigraph">
+&quot;In un triangolo il quadrato della misura di un lato è uguale alla somma dei quadrati delle misure degli altri due,
+diminuita del doppio prodotto delle misure di questi due lati per il coseno dell'angolo fra di essi compreso.&quot;</blockquote>
+<p></p>
+<div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<img alt="triangolo acutangolo notazione standard" src="images/trigo/triangle3.gif" style="width: 720px; height: auto; max-width: 100%;">
+</div><p></p>
+<blockquote class="epigraph">
+<center>
+<p>
+ <span id="teoremaCoseno_1">...</span>
+ </p>
+ <p>
+ <span id="teoremaCoseno_2">...</span>
+ </p>
+ <p>
+ <span id="teoremaCoseno_3">...</span>
+ </p>
+
+</center>
+</blockquote><p>Questo teorema può essere considerato come una generalizzazione del teorema di Pitagora, che si ottiene da questo
+come caso particolare quando uno dei tre angoli misura 90°.</p>
+</div>
+<div class="section" id="risoluzione-di-un-triangolo-qualsiasi">
+<h2>Risoluzione di un triangolo qualsiasi</h2>
+<p></p>
+
+<div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<img alt="work in progress..." src="images/trigo/wip.gif" style="width: 720px; height: auto; max-width: 100%;">
+</div><div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
 this.page.url = "https://alessiogaimarri.github.io/selosai/";  // Replace PAGE_URL with your page's canonical URL variable
