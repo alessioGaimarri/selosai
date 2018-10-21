@@ -13,7 +13,7 @@
   <!--ketex -->
   
 
-  <title>Trigonometria</title>
+  <title>Trigonometria (III)</title>
 
 
   <meta name="HandheldFriendly" content="True" />
@@ -42,30 +42,32 @@
   <![endif]-->
 
 
-  <link href="./trigonometria.html" rel="canonical" />
+  <link href="./trigonometria_3.html" rel="canonical" />
 
-    <meta name="description" content="...">
+    <meta name="description" content="keep calm and use trigonometry">
 
     <meta name="author" content="Alessio Gaimarri">
 
     <meta name="tags" content="trigonometria">
+    <meta name="tags" content="applicazioni">
 
 
 
 
 <!-- Open Graph -->
 <meta property="og:site_name" content="selosai"/>
-<meta property="og:title" content="Trigonometria"/>
-<meta property="og:description" content="..."/>
+<meta property="og:title" content="Trigonometria (III)"/>
+<meta property="og:description" content="keep calm and use trigonometry"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="./trigonometria.html"/>
+<meta property="og:url" content="./trigonometria_3.html"/>
 <meta property="og:type" content="article"/>
-<meta property="article:published_time" content="2018-09-16 12:00:00+02:00"/>
+<meta property="article:published_time" content="2018-10-21 14:00:00+02:00"/>
 <meta property="article:modified_time" content=""/>
 <meta property="article:author" content="./author/alessio-gaimarri.html">
 <meta property="article:section" content="matematica"/>
 <meta property="article:tag" content="trigonometria"/>
-<meta property="og:image" content="./images/trigo.jpg">
+<meta property="article:tag" content="applicazioni"/>
+<meta property="og:image" content="./images/trigo3.jpg">
 
 <!-- Twitter Card -->
 
@@ -73,18 +75,18 @@
 {
   "@context": "http://schema.org",
   "@type": "Article",
-  "name": "Trigonometria",
-  "headline": "Trigonometria",
-  "datePublished": "2018-09-16 12:00:00+02:00",
+  "name": "Trigonometria (III)",
+  "headline": "Trigonometria (III)",
+  "datePublished": "2018-10-21 14:00:00+02:00",
   "dateModified": "",
   "author": {
     "@type": "Person",
     "name": "Alessio Gaimarri",
     "url": "./author/alessio-gaimarri.html"
   },
-  "image": "./images/trigo.jpg",
-  "url": "./trigonometria.html",
-  "description": "..."
+  "image": "./images/trigo3.jpg",
+  "url": "./trigonometria_3.html",
+  "description": "keep calm and use trigonometry"
 }
 </script>
 </head>
@@ -121,14 +123,14 @@
             <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
           </span>
         </nav>
-        <h1 class="post-title">Trigonometria</h1>
+        <h1 class="post-title">Trigonometria (III)</h1>
         <!-- TODO : Proper class for headline -->
         <span class="post-meta">
                 <a href="./author/alessio-gaimarri.html">Alessio Gaimarri</a>
-            | <time datetime="dom 16 settembre 2018">dom 16 settembre 2018</time>
+            | <time datetime="dom 21 ottobre 2018">dom 21 ottobre 2018</time>
         </span>
         <!-- TODO : Modified check -->
-            <div class="post-cover cover" style="background-image: url('./images/trigo.jpg')">
+            <div class="post-cover cover" style="background-image: url('./images/trigo3.jpg')">
       </div>
     </header>
 
@@ -140,120 +142,140 @@
         <article class="post">
         <div class="inner">
             <section class="post-content">
-                <p>la <strong>trigonometria</strong> è quella parte della matematica che tratta le relazioni tra le misure dei lati e le
-funzioni goniometriche degli angoli di un triangolo. La notazione standard utilizzata solitamente per
-indicare le varie parti del triangolo è la seguente:</p>
+                <p>In questo articolo passeremo in rassegna alcuni problemi la cui risoluzione richiede l'utilizzo dei teoremi
+di trigonometria dimostrati le scorse settimane, distinguendo tra quelli relativi
+ai soli <a class="reference external" href="/trigonometria.html">triangoli rettangoli</a> da quelli generali validi per tutti i <a class="reference external" href="/trigonometria_2.html">triangoli</a>.
+Prima di iniziare tenete a mente le seguenti parole:</p>
+<p></p>
+<div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<img alt="keep calm and use trigonometry" src="images/trigo/keepCalmTrigo.jpg" style="width: 720px; height: auto; max-width: 100%;">
+</div><div class="section" id="risoluzione-di-un-triangolo-qualsiasi">
+<h2>Risoluzione di un triangolo qualsiasi</h2>
+<div class="section" id="problema-1-tre-citta-su-una-mappa">
+<h3>Problema 1 (tre città su una mappa)</h3>
+<p>Consideriamo il triangolo immaginario i cui vertici corrispondono
+alle città di Torino, Praga e Lione.</p>
+<p></p>
+
+<div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<img alt="triangolo Praga-Lione-Torino" src="images/trigo/triangoloPRALITO.PNG" style="width: 720px; height: auto; max-width: 100%;">
+</div><p>Se conosciamo le misure dei segmenti che congiungono Torino con le altre due città e
+dell'angolo compreso tra questi:</p>
+<blockquote class="epigraph">
+Torino-Lione = 235 km
+Torino-Praga = 752 km
+α = 105°</blockquote>
+<ul class="simple">
+<li>Quanto misura il lato Lione-Praga?</li>
+<li>Quanto vale l'area racchiusa dal triangolo?</li>
+</ul>
+<p>Per rispondere alla prima domanda possiamo applicare il <strong>teorema del coseno</strong>:</p>
+<p></p>
+<blockquote class="epigraph">
+<center>
+<p>
+ <span id="lionePraga">...</span>
+ </p>
+ <p>
+ <span id="lionePraga2">...</span>
+ </p>
+  <p>
+ <span id="lionePraga3">...</span>
+ </p>
+
+</center>
+</blockquote><p>Mentre per rispondere alla seconda sfruttiamo il primo teorema sull'area di un triangolo qualsiasi, per cui:</p>
+<p></p>
+<blockquote class="epigraph">
+<center>
+<p>
+ <span id="AreaTPL">...</span>
+ </p>
+ <p>
+ <span id="AreaTPL2">...</span>
+ </p>
+
+</center>
+</blockquote></div>
+<div class="section" id="problema-2-distanza-terra-luna">
+<h3>Problema 2 - (distanza Terra-Luna)</h3>
+<p>Immaginiamo di dover ricavare la distanza Terra-Luna. Se conosciamo il raggio terrestre e le coordinate
+di due città aventi la medesima longitudine:</p>
+<p></p>
+<blockquote class="epigraph">
+<center>
+<p>
+  Cremona punto A <span id="cremonaLatLong"> </span>
+ </p>
+ <p>
+ Gamba punto B <span id="gambaLatLong"> </span>
+ </p>
+  <p>
+ <span id="raggioTerrestre">...</span>
+ </p>
+
+</center>
+</blockquote><div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<img alt="triangolo rettangolo" src="images/trigo/schemaTerraLunaProvvisorio.PNG" style="width: 720px; height: auto; max-width: 100%;">
+</div><p>Dalla figura si vede che il triangolo ABC è isoscele, pertanto posso dedurre che:</p>
+<p></p>
+<blockquote class="epigraph">
+<center>
+<p>
+  <span id="ugAngoli"> </span>
+ </p>
+
+
+</center>
+</blockquote><p>Ora se considero il triangolo BLC per il teorema dei seni posso scrivere:</p>
+<p></p>
+<blockquote class="epigraph">
+<center>
+<p>
+  <span id="appTeoSeni"> </span>
+ </p>
+
+
+</center>
+</blockquote><p>Per ricavare la distanza Terra-Luna mi basterà misurare l'angolo β2,
+ossia la declinazione della luna a Gamba:</p>
+<p></p>
+<blockquote class="epigraph">
+<center>
+<p>
+  <span id="distanzaTerraLuna"> </span>
+ </p>
+
+<p>
+  <span id="risuSeni"> </span>
+ </p>
+  <p>
+  <span id="distanzaTerraLuna2"> </span>
+ </p>
+</center>
+</blockquote></div>
+</div>
+<div class="section" id="risoluzione-di-un-triangolo-rettangolo">
+<h2>Risoluzione di un triangolo rettangolo</h2>
+<p>&quot;risolvere&quot; un triangolo rettangolo significa determinare le misure di tutti i lati e di
+tutti gli angoli, una volta noti 2 elementi del triangolo, fra cui almeno un lato.</p>
+<p>casi possibili:</p>
 <ol class="arabic simple">
-<li>Le prime tre lettere maiuscole dell'alfabeto italiano A,B,C disposte dal vertice in basso a sinistra
-in senso antiorario indicano i vertici.</li>
-<li>Gli angoli di ciascun vertice sono indicati con la corrispondente lettera greca α,β,γ.</li>
-<li>I lati sono invece indicati con la lettera minuscola del vertice opposto a,b,c.</li>
+<li>2 cateti</li>
+<li>1 cateto e l'ipotenusa</li>
+<li>1 cateto e un angolo acuto</li>
+<li>l'ipotenusa e un angolo acuto</li>
 </ol>
-<div class="section" id="triangoli-rettangoli">
-<h2>Triangoli rettangoli</h2>
-<p>Iniziamo considerando i triangoli rettangoli, ovvero quelli che hanno un angolo retto, ad esempio
-α = 90° = π/2 radianti.</p>
+<p>In ciascun caso dovremo saper utilizzare a nostro vantaggio tutte le relazioni fin qui viste per
+trovare le incognite del problema.</p>
+<p></p>
 <div class="figure" style="width: 800px; height: auto; max-width: 100%;">
-<img alt="triangolo rettangolo" src="images/trigo/triangolo_rettangolo.jpg" style="width: 720px; height: auto; max-width: 100%;">
-<p class="caption">Rappresentazione di un triangolo rettangolo</p>
-<div class="legend">
-</div>
-</div><p>Dal momento che la somma degli angoli interni di <strong>ogni</strong> triangolo deve dare come somma 180° = π rad.</p>
-<blockquote class="epigraph">
-<center>
-<p>
-<span id="sommaAngoliInterni">...</span> &nbsp;&nbsp;&nbsp;<span >(triangolo qualsiasi)</span>
-</p>
-</center>
-</blockquote><p>In un triangolo rettangolo la somma dei due angoli acuti β e γ deve per forza di cose
-essere 90°, quindi per definizione, β e γ sono angoli <strong>complementari</strong>.</p>
-<blockquote class="epigraph">
-<center>
-<p>
- <span id="sommaAngoliInterniRettangolo">...</span>&nbsp;&nbsp;&nbsp;<span >(triangolo rettangolo)</span>
- </p>
- <p>
-   <span id="sommaAngoliInterniRettangolo2">...</span> &nbsp;&nbsp;&nbsp;<span >(triangolo rettangolo)</span>
-   </p>
-</center>
-</blockquote><p>per i triangoli rettangoli esiste una relazione che lega tra loro le misure dei tre lati: il <strong>teorema di Pitagora</strong>:</p>
-<blockquote class="epigraph">
-&quot;In ogni triangolo rettangolo l'area del quadrato costruito sull'ipotenusa è uguale alla somma delle aree dei quadrati costruiti sui cateti.&quot;</blockquote>
-<div class="figure" style="width: 800px; height: auto; max-width: 100%;">
-<img alt="rappresentazione teorema di pitagora" src="images/trigo/pitagora.png" style="width: 720px; height: auto; max-width: 100%;">
-<p class="caption">Rappresentazione del teorema di Pitagora</p>
-<div class="legend">
-</div>
-</div></div>
-<div class="section" id="teorema-sui-triangoli-rettangoli">
-<h2>1° teorema sui triangoli rettangoli</h2>
-<blockquote class="epigraph">
-&quot;In un triangolo rettangolo la misura di un cateto è uguale a quella dell'ipotenusa
-moltiplicata per il seno dell'angolo opposto al cateto, o moltiplicata per il coseno
-dell'angolo acuto adiacente al cateto&quot;</blockquote>
-<p>Questo teorema si può esprimere tramite le seguenti 4 formule:</p>
-<blockquote class="epigraph">
-<center>
-<p>
- <span id="pTr_1">...</span>
- </p>
- <p>
-   <span id="pTr_2">...</span>
-   </p>
-
-</center>
-</blockquote><div class="figure" style="width: 800px; height: auto; max-width: 100%;">
-<img alt="triangolo rettangolo" src="images/trigo/triangolo_rettangolo.jpg" style="width: 720px; height: auto; max-width: 100%;">
-</div></div>
-<div class="section" id="id1">
-<h2>2° teorema sui triangoli rettangoli</h2>
-<blockquote class="epigraph">
-&quot;In un triangolo rettangolo la misura di un cateto è uguale a quella dell'altro cateto
-moltiplicata per la tangente dell'angolo opposto al primo cateto, o moltiplicata per la
-cotangente dell'angolo acuto adiacente al primo cateto&quot;</blockquote>
-<p>Questo risultato può essere ottenuto manipolando le formule del primo teorema e utilizzando le
-definizioni di tangente e cotangente qui riportate:</p>
-<blockquote class="epigraph">
-<center>
-<p>
- <span >tan(α) = sin(α)/cos(α)</span>
- </p>
- <p>
-   <span >cotan(α) = 1/tan(α) = cos(α)/sin(α)</span>
-   </p>
-
-</center>
-</blockquote><p>Dalle 4 relazioni del primo teorema possiamo ricavare la tangente di β:</p>
-<blockquote class="epigraph">
-<center>
-<p>
- <span id="bfrattoc_1">...</span> <span >b = c tan(β)</span>
- </p>
-</center>
-</blockquote><p>e la cotangente di γ:</p>
-<blockquote class="epigraph">
-<center>
-<p>
- <span id="bfrattoc_2">...</span> <span >b = c cot(γ)</span>
- </p>
-</center>
-</blockquote><p>da cui otteniamo le espressioni che esprimono il contenuto vero e proprio del teorema:</p>
-<blockquote class="epigraph">
-<center>
-<p>
- <span id="prime">...</span>
- </p>
- <p>
- <span id="seconde">...</span>
- </p>
-</center>
-</blockquote><div class="figure" style="width: 800px; height: auto; max-width: 100%;">
-<img alt="triangolo rettangolo" src="images/trigo/triangolo_rettangolo.jpg" style="width: 720px; height: auto; max-width: 100%;">
+<img alt="work in progress" src="images/trigo/wip.gif" style="width: 720px; height: auto; max-width: 100%;">
 </div><div id="disqus_thread"></div>
 <script>
 var disqus_config = function () {
 this.page.url = "https://alessiogaimarri.github.io/selosai/";  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = "trigo"; // Replace PAGE_IDENTIFIER (lo slug del post)
+this.page.identifier = "trigo3"; // Replace PAGE_IDENTIFIER (lo slug del post)
  };
 
 (function() { // DON'T EDIT BELOW THIS LINE
@@ -265,29 +287,29 @@ s.setAttribute('data-timestamp', +new Date());
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <script id="dsq-count-scr" src="//selosai.disqus.com/count.js" async></script><!--<p style="font-size:90%;">NOTA: i link a pagine esterne sono stati controllati l'ultima volta il 22 luglio 2018</p>-->
-<link rel="stylesheet" type="text/css" href="./css/trigo.css">
-<script src="./js/trigo.js"></script></div>
+<link rel="stylesheet" type="text/css" href="./css/trigo3.css">
+<script src="./js/trigo3.js"></script></div>
 
             </section>
 
             <section class="post-info">
                 <div class="post-share">
                     <a class="twitter" 
-                       href="https://twitter.com/share?text=Trigonometria&amp;url=https://alessiogaimarri.github.io/selosai/trigonometria.html" 
+                       href="https://twitter.com/share?text=Trigonometria (III)&amp;url=https://alessiogaimarri.github.io/selosai/trigonometria_3.html" 
                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
                     </a>
-                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alessiogaimarri.github.io/selosai/trigonometria.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alessiogaimarri.github.io/selosai/trigonometria_3.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
                     </a>
-                    <a class="googleplus" href="https://plus.google.com/share?url=https://alessiogaimarri.github.io/selosai/trigonometria.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://alessiogaimarri.github.io/selosai/trigonometria_3.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
                     </a>
                     <div class="clear"></div>
                 </div>
 
                 <aside class="post-tags">
-<a href="./tag/trigonometria.html">trigonometria</a>                </aside>
+<a href="./tag/trigonometria.html">trigonometria</a><a href="./tag/applicazioni.html">applicazioni</a>                </aside>
 
                 <div class="clear"></div>
 
