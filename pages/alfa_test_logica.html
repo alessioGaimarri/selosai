@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- P5.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+   <!-- katex -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+  <!--ketex -->
+  
+
+  <title>α test - logica</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="../" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="../theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="../theme/css/code_blocks/monokai.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="selosai"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="selosai"/>
+<meta property="og:description" content="View the blog."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../"/>
+<meta property="og:image" content="../theme/images/home-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Website",
+  "name": " selosai ",
+  "url" : "../",
+  "image": "../theme/images/home-bg.jpg",
+  "description": "View the blog."
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="../pages/about.html">Chi sono</a></li>
+              <li class="nav-alfa_test_logica active" role="presentation"><a href="../pages/alfa_test_logica.html">α test - logica</a></li>
+              <li role="presentation"><a href="../pages/archivio.html">Archivio</a></li>
+              <li role="presentation"><a href="../pages/missione.html">Missione</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="../" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">α test - logica</h1>
+            <div class="post-cover cover" style="background-image: url('..//images/logica.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+  <!-- Post content -->
+  <main class="content" role="main">
+      <article class="post">
+      <div class="inner">
+          <section class="post-content">
+              <div class="section" id="logica-dei-predicati">
+<h2>Logica dei predicati</h2>
+<blockquote class="epigraph">
+   <center>1</center>
+   <p></p>
+   <span class="corsivo, grassetto">“Tutte le volte che accompagno mia figlia a scuola arriviamo in ritardo”.</span>
+   Se la precedente affermazione è <span class="grassetto">FALSA</span>, quale delle seguenti è certamente vera?
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="giusta(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   </tr>
+   <tr >
+   <td>Almeno una volta ho accompagnato mia figlia a scuola e non siamo arrivati in ritardo</td>
+   <td>Almeno una volta ho accompagnato mia figlia a scuola e siamo arrivati in ritardo</td>
+   <td>Tutte le volte che ho accompagnato mia figlia a scuola siamo arrivati puntuali</td>
+   <td>Tutte le volte che ho accompagnato mia figlia a scuola siamo arrivati in anticipo</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP1" onclick="mostraSoluzione('soluzioneP1')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP1" onclick="nascondiSoluzione('soluzioneP1')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP1" style="display: none;">
+<center>
+<p>per rendere falsa la proposizione iniziale dobbiamo negare sia il quantificatore logico che
+compare all'inizio, ovvero "tutte", che l'azione che ne conseguiva, ossia "arriviamo in ritardo":</p>
+<p>“NON Tutte le volte che accompagno mia figlia a scuola NON arriviamo in ritardo”</p>
+<p> dato che "non tutte le volte" equivale logicamente ad "almeno una" </p>
+<p> posso riscriverla in questo modo:</p>
+<p>"Almeno una volta ho accompagnato mia figlia a scuola e non siamo arrivati in ritardo"</p>
+ </center>
+</blockquote><blockquote class="epigraph">
+   <center>2</center>
+   <p></p>
+   Tutti i tau sono lambda; tutti gli omega sono tau; tutti i lambda sono delta”. In base alle
+   precedenti affermazioni, quale delle seguenti NON è necessariamente vera?
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr >
+   <td>I non delta sono non lambda</td>
+   <td>I non lambda sono non delta</td>
+   <td>I non tau sono non omega</td>
+   <td>Tutti gli omega sono lambda</td>
+   <td>Tutti i tau sono delta</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP13" onclick="mostraSoluzione('soluzioneP13')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP13" onclick="nascondiSoluzione('soluzioneP13')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP13" style="display: none;">
+<center>
+<p>possiamo rappresentare la situazione con un diagramma di Venn</p>
+ <img src="../images/alfa/cerchiConcentrici.JPG" alt="rappresentazione sottoforma di insiemi">
+ <p>da cui possiamo dedurre che solo la risposta B non è necessariamente vera</p>
+ </center>
+</blockquote><blockquote class="epigraph" >
+   <center>3</center>
+   <p></p>
+   Chi va al mare mangia il gelato. Tutti i bambini mangiano il gelato. Francesco va al mare”.
+   Se le precedenti affermazioni sono vere, quale delle seguenti è necessariamente vera?
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr >
+   <td>Chi mangia il gelato va al mare</td>
+   <td>Chi va al mare è un bambino</td>
+   <td>Francesco è un bambino</td>
+   <td>Francesco mangia il gelato</td>
+   <td>Tutti i bambini vanno al mare</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP14" onclick="mostraSoluzione('soluzioneP14')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP14" onclick="nascondiSoluzione('soluzioneP14')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP14" style="display: none;">
+<center>
+<p>se chi va al mare mangia il gelato non è però vero il contrario, quindi la
+risposta A deve essere esclusa.</p><p> Se tutti i bambini mangiano gelato non possiamo
+concludere che chi va al mare è un bambino. Per trarre questa conclusione
+avrei dovuto dire che solo i bambini mangiano gelato. Questo esclude anche la
+risposta B.</p><p>per la stessa ragione anche sapendo che Francesco va al mare
+non possiamo concludere che Francesco sia un bambino. La risposta C va esclusa.</p>
+<p>delle ultime due rimaste la D è corretta, per il primo dei nostri enunciati, mentre la E è falsa perché
+ne inverte l'ordine casuale.</p>
+ </center>
+</blockquote></div>
+<div class="section" id="cifrari">
+<h2>cifrari</h2>
+<blockquote class="epigraph" >
+ <center>1</center>
+   <p></p>
+   <p>Se:
+      yy + jK + Ee = ZZ + Ee</p>
+      <p>ZZ = 4</p>
+      <p>yy = jK –2</p>
+      <p>allora jK è uguale a:</p>
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr >
+   <td>1</td>
+   <td>2</td>
+   <td>3</td>
+   <td>6</td>
+   <td>non è possibile stabilire il valore di jK</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP15" onclick="mostraSoluzione('soluzioneP15')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP15" onclick="nascondiSoluzione('soluzioneP15')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP15" style="display: none;">
+<center>
+<p>dai dati in mio possesso posso riscrivere la prima equazione:</p>
+<p>yy + jK + Ee = ZZ + Ee</p>
+<p>in questo modo</p>
+<p>jK - 2 + jK + Ee = 4 + Ee</p>
+<p>e ricavare, semplificando Ee e esplicitando jK:</p>
+<p>2jK = 6</p>
+<p>jK = 3</p>
+ </center>
+</blockquote></div>
+<div class="section" id="matematica-elementare">
+<h2>matematica elementare</h2>
+<blockquote class="epigraph" id="pass1">
+   <center>1</center>
+   <p></p>
+   Uno scultore vuole creare un enorme cubo composto da tanti piccoli cubetti di legno. Ha
+   a disposizione 359 piccoli cubetti, tutti uguali. Quanti cubetti utilizzerà lo scultore per
+   creare l'opera più grande possibile?
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr >
+   <td>216</td>
+   <td>256</td>
+   <td>316</td>
+   <td>343</td>
+   <td >359</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP2" onclick="mostraSoluzione('soluzioneP2')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP2" onclick="nascondiSoluzione('soluzioneP2')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP2" style="display: none;">
+<center>
+<p>dato che il volume di un cubo di lato L, composto da n cubetti sarà:</p>
+<p id="volCubo"></p>
+<p>dobbiamo trovare il numero di cubi n che elevato al cubo si avvicina di più al
+valore dei cubi in nostro possesso senza superarlo</p>
+ <p id="volCubo2"></p>
+<p>anche in questo caso possiamo procedere facendo qualche tentativo e ridurre
+passo dopo passo il range entro cui si troverà n</p>
+ <p id="volCubo3"></p>
+ <p id="volCubo4"></p>
+ <p id="volCubo5"></p>
+
+ </center>
+</blockquote><blockquote class="epigraph" id="pass1">
+   <center>2</center>
+   <p></p>
+   Nel tentativo di guadagnare qualcosa in più per andare in vacanza, Marco, Rita, Irene e Sara hanno
+      svolto vari lavoretti per i loro vicini. Prima di iniziare hanno pattuito che tutti i soldi guadagnati
+      sarebbero stati condivisi equamente tra di loro.
+      <p>• Marco ha guadagnato € 10.</p>
+      <p>• Rita ha guadagnato € 15.</p>
+      <p>• Irene ha guadagnato € 12.</p>
+      <p>• Sara ha sorpreso tutti gli altri guadagnando € 35 e quindi deve dei soldi agli altri amici.</p>
+      <p>Quanto deve ricevere Rita da Sara?</p>
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="giusta(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr >
+   <td>3 €</td>
+   <td>6 €</td>
+   <td>8 €</td>
+   <td>9 €</td>
+   <td >10 €</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP31" onclick="mostraSoluzione('soluzioneP31')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP31" onclick="nascondiSoluzione('soluzioneP31')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP31" style="display: none;">
+<center>
+<p>per prima cosa bisogna calcolare quanto spetta a ciascuno facendo la somma dei soldi guadagnati da ciascuno
+diviso per il loro numero:</p>
+<p id="condi"></p>
+<p>dato che tutti hanno guadagnato meno eccetto Sara, dovrà dare a ciascuno dei suoi amici la differenza
+tra la cifra concordata inizialmente e quanto guadagnato da ciascuno. Nel caso di Rita questa somma sarà:</p>
+<p>18€ - 15€ = 3€</p>
+ </center>
+</blockquote><blockquote class="epigraph" >
+<center>3</center>
+<p></p>
+Assumendo che ogni pappagallo mangi la stessa quantità di cibo ogni giorno e che lo
+stesso avvenga per ogni canarino, ogni giorno con 14 grammi di becchime si sfamano 4
+pappagalli e 3 canarini, mentre con 18 grammi dello stesso mangime si sfamano 4
+pappagalli e 5 canarini. Quale delle seguenti affermazioni NON è vera?
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr >
+   <td>Un canarino viene sfamato per 2 giorni con 4 grammi di becchime</td>
+   <td>Due pappagalli e sei canarini richiedono ogni giorno lo stesso becchime di cinque
+       pappagalli</td>
+   <td>Cinque pappagalli e cinque canarini richiedono ogni giorno 20 grammi di becchime</td>
+   <td>Un pappagallo ogni giorno mangia quanto un canarino</td>
+   <td>Tre pappagalli e tre canarini richiedono ogni giorno 12 grammi di becchime</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP7" onclick="mostraSoluzione('soluzioneP7')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP7" onclick="nascondiSoluzione('soluzioneP7')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP7" style="display: none;">
+<center>
+<p>
+ dalle indicazioni fornite possiamo trovare la quantità giornaliera di cibo consumata
+ dalle due specie. Indicando con ΔP la quantità di becchime mangiata da un pappagallo
+ e ΔC quella consumata da un canarino possiamo impostare il sistema:
+</p>
+<p id="sistemaPappagalli"></p>
+<p> che risolvo sottraendo dalla seconda equazione la prima</p>
+<p id="sistemaPappagalli2"></p>
+<p> sostituendo questo risultato nella prima equazione ricavo ΔP</p>
+<p id="sistemaPappagalli3"></p>
+<p>quindi abbiamo che le quantità di cibo consumate sono identiche.
+Ciò rende vere tutte le risposte tranne la B</p>
+
+ </center>
+</blockquote></div>
+<div class="section" id="proporzioni-verbali">
+<h2>proporzioni verbali</h2>
+ <blockquote class="epigraph" id="pass1">
+ <center>2</center>
+ <p></p>
+    Quali tra i termini proposti completano correttamente la seguente proporzione verbale?
+    SFRTHZ : TESSIV = X : Y
+    <table>
+    <tr >
+    <td><span class="cliccabile" onclick="giusta(this)">A</span></td>
+    <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+    <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+    <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+    </tr>
+    <tr >
+    <td>X = DPILGF Y = EOLIHE</td>
+    <td>X = DPILFG Y = EOLIHE</td>
+    <td>X = DPILFG Y = EOLIEH</td>
+    <td>X = DPILGF Y = FOLIEH</td>
+
+    </tr>
+    </table>
+ </blockquote>
+
+ <center>
+ <button id="bottoneMostra_soluzioneP5" onclick="mostraSoluzione('soluzioneP5')">Mostra Soluzione</button>
+ <button id="bottoneNascondi_soluzioneP5" onclick="nascondiSoluzione('soluzioneP5')" style="display: none;">Nascondi Soluzione</button>
+ </center>
+
+ <blockquote class="epigraph" id="soluzioneP5" style="display: none;">
+ <center>
+ <p>
+ La prima lettera della seconda sequenza T
+ è la SUCCESSIVA della prima lettera della prima sequenza S nell'alfabeto italiano, composto
+ da 21 lettere: </p>
+ <p>ABCDEFGHILMNOPQRSTUVZ. </p>
+ <p>La E invece è la PRECEDENTE della corrispondente lettera della
+ prima sequenza, poi di nuovo S è la SUCCESSIVA della R e così via alternate...</p>
+<p> l'unica coppia di sequenze che segue questa regola è la A</p>
+ </p>
+
+  </center>
+ </blockquote></div>
+<div class="section" id="parentele">
+<h2>parentele</h2>
+<blockquote class="epigraph" >
+<center>1</center>
+   <p></p>
+   Tommaso, Rosario e Flavio hanno sposato Viviana, Alice e Marcella, due delle quali sono
+      tra loro sorelle. Rosario ha sposato la sorella di Alice. Flavio ha sposato Alice. Tommaso
+      non è cognato di Rosario e Marcella non ha sorelle. La moglie di Rosario è:
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr >
+   <td>Alice</td>
+   <td>Marcella</td>
+   <td>Viviana</td>
+   <td>la sorella di Viviana</td>
+   <td>la sorella di Marcella</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP11" onclick="mostraSoluzione('soluzioneP11')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP11" onclick="nascondiSoluzione('bottoneMostra_soluzioneP11')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP11" style="display: none;">
+<center>
+<p>se Rosario è sposato con la sorella di Alice, sposata con Flavio,
+e Rosario, sposato con la sorella di Alice, non è cognato di Tommaso, quest'ultimo deve per forza di cose
+essere sposato con Marcella, che non ha sorelle. Quindi abbiamo le tre coppie: </p>
+<p>Flavio e Alice</p>
+<p>Tommaso e Marcella</p>
+<p>Rosario e Viviana</p>
+ </center>
+</blockquote><blockquote class="epigraph">
+<center>2</center>
+   <p></p>
+   I coniugi Bianchi hanno un figlio e una figlia e sono bisnonni. Ciascuno dei loro discendenti maschi
+      ha due figli maschi e nessuna figlia femmina. Ciascuna delle loro discendenti femmine ha un figlio
+      maschio e una figlia femmina (tutti i loro discendenti sono attualmente vivi).
+      Quanti pronipoti maschi hanno i coniugi Bianchi?
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="giusta(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr>
+   <td>7</td>
+   <td>8</td>
+   <td>10</td>
+   <td>11</td>
+   <td>14</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP30" onclick="mostraSoluzione('soluzioneP30')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP30" onclick="nascondiSoluzione('bottoneMostra_soluzioneP30')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP30" style="display: none;">
+<center>
+<p> <img src="../images/alfa/parentelaSchema.png" alt="schema grado parentela" style="width:128px;"> </p>
+<p>Applicando le regole date dal secondo grado di parentela (i figli dei coniugi Bianchi) avremo:</p>
+<p>4 nipoti: 2M + 1M + 1F</p>
+<p>e 8 pronipoti: 2M + 2M + 2M + 1M + 1F</p>
+<p> quindi i pronipoti maschi saranno 7</p>
+ </center>
+</blockquote></div>
+<div class="section" id="insiemi">
+<h2>insiemi</h2>
+<blockquote class="epigraph">
+<center>1</center>
+<p></p>
+   I 900 seggi di un parlamento sono ripartiti fra 10 partiti politici. Non ci sono due partiti con
+   uno stesso numero di seggi e il 10°, quello con il minor numero di seggi, ne ha 25.
+   Collocando i partiti in ordine decrescente per numero di seggi, qual è il più alto numero di
+   seggi che il quinto partito può avere?
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr >
+   <td>29</td>
+   <td>151</td>
+   <td>153</td>
+   <td>155</td>
+   <td >156</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP4" onclick="mostraSoluzione('soluzioneP4')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP4" onclick="nascondiSoluzione('soluzioneP4')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP4" style="display: none;">
+<center>
+<p>partendo dal partito col minor numero di seggi, 25, se voglio massimizzare il numero di seggi del
+quinto in ordine decrescente, dovrò minimizzare la differenza numerica tra decimo
+e nono, nono e ottavo, ottavo e settimo, e settimo e sesto:</p>
+<p>10° partito: 25 seggi</p>
+<p>9° partito: 26 seggi</p>
+<p>8° partito: 27 seggi</p>
+<p>7° partito: 28 seggi</p>
+<p>6° partito: 29 seggi</p>
+<p> i restanti seggi dovranno essere suddivisi tra i 5 partiti rimanenti</p>
+<p>900 - (25+26+27+28+29) = 765</p>
+<p> 765/5 = 153</p>
+<p>dato che non vi possono essere due partiti con lo stesso numero di seggi toglierò
+un seggio da uno dei cinque a favore di un altro partito e tra i tre rimanenti ne toglierò due da uno in favore di un terzo partito
+ottenendo alla fine questa ripartizione:</p>
+ <p>5° partito: 153 - 2  = 151seggi</p>
+<p>4° partito: 153 - 1 = 152 seggi</p>
+<p>3° partito: 153 seggi</p>
+<p>2° partito: 153 + 1 = 154 seggi</p>
+<p>1° partito: 153 + 2 = 155 seggi</p>
+
+ </center>
+</blockquote><blockquote class="epigraph" id="pass1">
+<center>2</center>
+<p></p>
+     A un corso di laurea sono iscritti 235 studenti, di cui 183 maschi, 190 miopi, 204 castani e
+     214 in corso. Qual è il numero minimo di uomini miopi?
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr >
+   <td>1</td>
+   <td>52</td>
+   <td>138</td>
+   <td>152</td>
+   <td>162</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP10" onclick="mostraSoluzione('soluzioneP10')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP10" onclick="nascondiSoluzione('soluzioneP10')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP10" style="display: none;">
+<center>
+<p>per avere il numero massimo di maschi miopi dovremmo avere che l'insieme dei maschi sia
+un sottinsieme proprio di quello dei miopi.</p>
+<p>per ottenere il caso contrario dovremmo invece imporre che sia l'insieme dei non maschi
+ad essere contenuto interamente in quello dei miopi.</p>
+<p>n° miopi - n° non maschi = 190 - (235 - 183) = 190 - 52 = 138 </p>
+
+ </center>
+</blockquote><blockquote class="epigraph" id="pass1">
+<center>3</center>
+<p></p>
+     Per ognuno dei dieci laboratori dell’ospedale Gamma ci sono due responsabili e almeno
+      tre ricercatori. Ogni operatore svolge un solo incarico in un solo laboratorio. Si può
+      quindi dedurre con certezza che nell’ospedale Gamma:
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="giusta(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr >
+   <td>i responsabili sono al massimo i 2/3 dei ricercatori</td>
+   <td>i responsabili sono al massimo 30</td>
+   <td>i responsabili sono esattamente 30</td>
+   <td>i responsabili sono esattamente i 2/3 dei ricercatori</td>
+   <td>i responsabili sono almeno i 2/3 dei ricercatori</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP12" onclick="mostraSoluzione('soluzioneP12')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP12" onclick="nascondiSoluzione('soluzioneP12')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP12" style="display: none;">
+<center>
+<p>in totale nei 10 laboratori avremo esattamente 20 responsabili</p>
+ <p>mentre il numero di ricercatori sarà un numero maggiore o uguale di 30</p>
+ <p id="respRic"></p>
+  <p >da ciò si deduce che al massimo questo rapporto potrà valere 2/3</p>
+ </center>
+</blockquote></div>
+<div class="section" id="conversioni-unita-di-misura">
+<h2>conversioni - unità di misura</h2>
+<blockquote class="epigraph">
+ <center>1</center>
+   <p></p>
+   Stephanie deve raggiungere i colleghi che partecipano a un meeting in una località
+      inglese. Giunta all'aeroporto di Londra decide di prendere a noleggio una macchina. La
+      benzina in Inghilterra costa 3 sterline al gallone. Si sa che:
+      - l'aeroporto e la località da raggiungere distano tra loro 375 km,
+      - ogni gallone equivale a 3,75 litri di benzina,
+      - una sterlina vale 1,25 euro,
+      - la macchina consuma 1 litro di benzina ogni 25 km.
+      Quale sarà la spesa sostenuta da Stephanie per la benzina necessaria per il viaggio di
+      andata e ritorno?
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile"  onclick="giusta(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr >
+   <td>10 €</td>
+   <td>15 €</td>
+   <td>30 €</td>
+   <td>35 €</td>
+   <td>40 €</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP8" onclick="mostraSoluzione('soluzioneP8')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP8" onclick="nascondiSoluzione('soluzioneP8')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP8" style="display: none;">
+<center>
+<p>
+La distanza percorsa, tenendo conto che consiste in andata e ritorno, sarà il doppio
+della distanza tra aeroporto e destinazione.
+</p>
+<p id="udm1"></p>
+<p>dal consumo della macchina possiamo ricavare il numero di litri di benzina necessari al viaggio </p>
+<p id="udm2"></p>
+<p>troviamo l'equivalente in galloni </p>
+<p id="udm3"></p>
+<p>calcoliamo il costo in sterline</p>
+<p id="udm4"></p>
+<p>e alla fine convertiamo in euro</p>
+<p id="udm5"></p>
+
+
+ </center>
+</blockquote><blockquote class="epigraph">
+ <center>2</center>
+   <p></p>
+   Robert, un ragazzo inglese in vacanza, viaggiando in automobile dall’Inghilterra alla Francia si è
+      confuso riguardo alla conversione delle miglia in chilometri, pensando che l’equivalenza fosse 5
+      chilometri = 8 miglia, invece di 5 miglia = 8 chilometri. A metà della sua vacanza si è spostato da un
+      hotel ad un altro. Aveva previsto che per percorrere 200 chilometri avrebbe impiegato oltre 5 ore,
+      viaggiando ad una velocità media di 60 miglia all’ora. In effetti ha viaggiato ad una velocità media
+      di 60 miglia all’ora, ma si è stupito di quanto velocemente avesse raggiunto la sua destinazione.
+      Quanto tempo prima del previsto Robert è arrivato a destinazione?
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile"  onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">E</span></td>
+   </tr>
+   <tr >
+   <td>1 ora e 40 minuti</td>
+   <td>2 ore</td>
+   <td>2 ore e 5 minuti</td>
+   <td>2 ore e 55 minuti</td>
+   <td>3 ore e 15 minuti</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP33" onclick="mostraSoluzione('soluzioneP33')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP33" onclick="nascondiSoluzione('soluzioneP33')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP33" style="display: none;">
+<center>
+<p>per prima cosa eseguiamo la stima del tempo impiegato a percorrere 200 km con la conversione
+sbagliata:</p>
+<p>se 5km = 8 miglia una velocità di 60 miglia all'ora equivale a:</p>
+<p id="convSbagliata"></p>
+<p >quindi per trovare il tempo impiegato per percorrere i 200 km eseguo la divisione:</p>
+<p id="deltaTSbagliato"></p>
+<p>per trovare i minuti equivalenti a 0,33 h utilizzo la proporzione:</p>
+<p id="propMinuti"></p>
+<p id="propMinuti2"></p>
+<p>quindi la stima inesatta del tempo impiegato è:</p>
+<p>Δt = 5 h e 20 minuti</p>
+<p>ora facciamo lo stesso calcolo ma utilizzando la conversione corretta</p>
+<p id="convCorretta"></p>
+<p id="deltaTCorretto"></p>
+<p id="propMinutiCorretti"></p>
+<p id="propMinutiCorretti2"></p>
+<p >quindi la stima esatta del tempo impiegato è:</p>
+<p>Δt = 2 h e 5 minuti</p>
+<p>facendo la differenza tra le due stime ottengo:</p>
+<p>differenza tra le stime: 3 ore  e 15 minuti</p>
+ </center>
+</blockquote></div>
+<div class="section" id="date-fusi-orari-orologi">
+<h2>date, fusi orari, orologi</h2>
+<blockquote class="epigraph" >
+<center>1</center>
+<p></p>
+   Un viaggiatore a Parigi si imbarca su un aereo diretto verso est. Il volo impiega 7 ore e la
+          sua destinazione si trova a 4 fusi orari di distanza. Se parte alle ore 20:30 del 30 aprile,
+          che ore sono e che giorno è quando arriva?
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">E</span></td>
+   </tr>
+   <tr >
+   <td>Le 7:30 del 30 aprile</td>
+   <td>Le 19:30 del primo maggio</td>
+   <td>Le 23:30 del 30 aprile</td>
+   <td>Le 7:30 del 30 aprile</td>
+   <td >Le 7:30 del primo maggio</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP9" onclick="mostraSoluzione('soluzioneP9')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP9" onclick="nascondiSoluzione('soluzioneP9')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP9" style="display: none;">
+<center>
+<p>
+Ricordando che Aprile ha 30 giorni, nel fuso orario di partenza l'arrivo
+avverrebbe alle 3:30 del mattino del primo maggio.</p>
+<p> Dato che il viaggio avviene
+verso Est e che la città di arrivo si trova a 4 fusi di distanza vuol dire che bisognerà
+aggiungere 4 ore all'orario di arrivo calcolato nel fuso orario di partenza: </p>
+<p>7:30 del primo maggio</p>
+
+
+ </center>
+</blockquote><blockquote class="epigraph" id="pass1">
+<center>2</center>
+<p></p>
+   In un circo, Enrico, l’unica persona incaricata di dare da mangiare agli animali nei recinti,
+          inizia il suo lavoro alle 6:30 del mattino. Si sa che:
+          1) Enrico si ferma 15 minuti presso ciascun recinto
+          2) le tigri vengono nutrite prima degli elefanti ma dopo gli orsi
+          3) i cavalli sono nutriti 15 minuti dopo gli orsi
+          4) i leoni sono nutriti dopo gli elefanti
+          Enrico alle 6:50 nutrirà:
+   <table>
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr >
+   <td>elefanti</td>
+   <td>cavalli</td>
+   <td>orsi</td>
+   <td>tigri</td>
+   <td>leoni</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP6" onclick="mostraSoluzione('soluzioneP6')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP6" onclick="nascondiSoluzione('soluzioneP6')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP6" style="display: none;">
+<center>
+<p>
+in base agli indizi forniti dobbiamo stabilire l'ordine seguito da Enrico:
+<p>Orsi < Tigri < Elefanti</p>
+ <p>Orsi < Cavalli</p>
+  <p> Elefanti < Leoni</p>
+  <p> da queste relazioni possiamo ricostruire l'ordine completo: </p>
+  <p> Orsi < Cavalli < Tigri < Elefanti < Leoni</p>
+  <p> sapendo che impiega 15 minuti per ciascuna gabbia e che inizia alle 6:30 alle 6:50
+  starà dando da mangiare agli animali del secondo turno: i cavalli.
+</p>
+
+ </center>
+</blockquote><div class="section" id="in-rete">
+<h3>In rete</h3>
+<ul class="simple">
+<li>altri alpha test disponibili online - <a class="reference external" href="http://www.alphatest.it/Test-di-ammissione/test-e-simulazioni/Test-d-ingresso-risolti-e-commentati">link</a></li>
+</ul>
+</div><script src="../js/alfaTestLogica.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/alfaTestLogica.css"></div>
+
+          </section>
+      </div>
+      </article>
+  </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+      
+      <!-- clicky badge-->
+      <a title="Real Time Web Analytics" href="http://clicky.com/101130897"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+        <script src="//static.getclicky.com/js" type="text/javascript"></script>
+        <script type="text/javascript">try{ clicky.init(101130897); }catch(e){}</script>
+        <noscript><p>
+        <img alt="Clicky" id="clicky" src="//in.getclicky.com/101130897ns.gif" /></p></noscript>
+
+
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="../theme/js/script.js"></script>
+
+</body>
+</html>
