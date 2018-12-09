@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- P5.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+   <!-- katex -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+  <!--ketex -->
+  
+
+  <title>α test - Matematica</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="../" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="../theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="../theme/css/code_blocks/monokai.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="selosai"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="selosai"/>
+<meta property="og:description" content="View the blog."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../"/>
+<meta property="og:image" content="../theme/images/home-bg.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Website",
+  "name": " selosai ",
+  "url" : "../",
+  "image": "../theme/images/home-bg.jpg",
+  "description": "View the blog."
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="../pages/about.html">Chi sono</a></li>
+              <li role="presentation"><a href="../pages/alfa_test_logica.html">α test - logica</a></li>
+              <li class="nav-alfa_test_mate active" role="presentation"><a href="../pages/alfa_test_mate.html">α test - Matematica</a></li>
+              <li role="presentation"><a href="../pages/archivio.html">Archivio</a></li>
+              <li role="presentation"><a href="../pages/missione.html">Missione</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="../" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">α test - Matematica</h1>
+            <div class="post-cover cover" style="background-image: url('..//images/alfa_mate.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+  <!-- Post content -->
+  <main class="content" role="main">
+      <article class="post">
+      <div class="inner">
+          <section class="post-content">
+              <div class="section" id="statistica-e-probabilita">
+<h2>statistica e probabilità</h2>
+<blockquote class="epigraph" id="pass1">
+<center>1</center>
+   <p></p>
+    La media aritmetica di cinque numeri è 14. Se la media aritmetica dei primi due è 20.
+    Allora la media aritmetica degli altri tre è:
+
+   <table class="risposte">
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr>
+   <td >8</td>
+   <td >9</td>
+   <td >10</td>
+   <td >12</td>
+   <td >14</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP1" onclick="mostraSoluzione('soluzioneP1')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP1" onclick="nascondiSoluzione('soluzioneP1')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP1" style="display: none;">
+<center>
+   <p>applicando la definizione di media aritmetica possiamo tradurre in formule il testo del problema
+   scrivendo:</p>
+   <p id="mediap1">...</p>
+   <p id="mediap1_2">...</p>
+
+   <p id="mediap1_3">...</p>
+   <p>dalle prime due possiamo ricavare:</p>
+   <p id="solp1_1"></p>
+   <p id="solp1_2"></p>
+   <p> quindi possiamo ricavare da queste la somma degli ultimi tre numeri:</p>
+   <p id="solp1_3"></p>
+   <p> e a questo punto ne troviamo la media aritmetica dividendola per 3</p>
+   <p id="solp1_4"></p>
+
+ </center>
+
+</blockquote><blockquote class="epigraph" id="pass1">
+<center>2</center>
+   <p></p>
+    Lanciando contemporaneamente due dadi non truccati, che probabilità vi è di ottenere "nove"?:
+
+   <table class="risposte">
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr>
+   <td >1/12</td>
+   <td >1/9</td>
+   <td >1/8</td>
+   <td >1/5</td>
+   <td >1/4</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP2" onclick="mostraSoluzione('soluzioneP2')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP2" onclick="nascondiSoluzione('soluzioneP2')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP2" style="display: none;">
+<center>
+   <p>per ciascuno dei 6 possibili esiti del primo lancio abbiamo 6 esiti possibili del secondo</p>
+   <p>ciò significa che le coppie di valori possibili sono 6 volte 6, ossia 36</p>
+   <p>tra queste quelle che hanno come somma 9 sono solo 4:</p>
+   <p>(3,6),(4,5),(5,4),(6,3)</p>
+   <p>quindi la probabilità di ottenere 9 sarà data dal rapporto tra casi favorevoli e il totale dei casi possibili</p>
+   <p id="prob_prob2"></p>
+ </center>
+
+</blockquote></div>
+<div class="section" id="geometria-analitica">
+<h2>Geometria analitica</h2>
+<blockquote class="epigraph" id="pass1">
+<center>1</center>
+   <p></p>
+ La circonferenza di equazione <span id="circ_1"></span>:
+
+   <table class="risposte">
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr>
+   <td >passa per il punto (0, 2) </td>
+   <td >ha centro nell'origine del sistema di assi cartesiani</td>
+   <td >passa per l'origine del sistema di assi cartesiani</td>
+   <td >ha centro sull'asse y</td>
+   <td >ha raggio uguale a 4</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP5" onclick="mostraSoluzione('soluzioneP5')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP5" onclick="nascondiSoluzione('soluzioneP5')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP5" style="display: none;">
+<center>
+   <p>l'equazione di una circonferenza di centro <span id="centro"></span> e raggio r è:</p>
+   <p id="eq_circ_c_r">...</p>
+   <p id="eq_circ_c_r_2">...</p>
+   <p> e ponendo </p>
+   <p>
+   <span id="eq_circ_c_r_3">...</span>&nbsp;&nbsp;&nbsp;
+   <span id="eq_circ_c_r_4">...</span>&nbsp;&nbsp;&nbsp;
+    <span id="eq_circ_c_r_5">...</span>
+   </p>
+   <p>otteniamo l'equazione in forma normale:</p>
+     <p id="eq_circ_c_r_6">...</p>
+   <p>nel nostro caso abbiamo: </p>
+    <p id="eq_circ_c_r_7">...</p>
+    <p >quindi la risposta corretta è la C</p>
+ </center>
+
+</blockquote><blockquote class="epigraph">
+<center>2</center>
+   <p></p>
+   la retta passante per il punto (1, -1) e ortogonale alla retta di equazione 2x + y + 6 = 0 ha
+   equazione:
+
+   <table class="risposte">
+   <tr >
+   <td><span class="cliccabile" onclick="giusta(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr>
+   <td >2y-x+3 = 0</td>
+   <td >y+2x-1 = 0</td>
+   <td >2y-x-3 = 0</td>
+   <td >y-2x+1 = 0</td>
+   <td >x+y-3 = 0</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP3" onclick="mostraSoluzione('soluzioneP3')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP3" onclick="nascondiSoluzione('soluzioneP3')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP3" style="display: none;">
+<center>
+<p>la retta passante per il generico punto <span id="genPunto"></span> è data dall'equazione:</p>
+<p id="rettaPassP"></p>
+<p> quindi nel nostro caso diventa:</p>
+<p id="rettaPassP2"></p>
+<p>se questa retta deve essere perpendicolare a quella data, che riscritta in forma normale diventa:</p>
+ <p id="eq_retta_p3"></p>
+ <p>il suo coefficiente angolare m deve soddisfare la relazione di ortogonalità:</p>
+ <p>m(-2) = -1</p>
+ <p>da cui ricavo m = 1/2 che sostituito nella nostra equazione di partenza mi dà:</p>
+ <p id="solP3"></p>
+ </center>
+
+</blockquote></div>
+<div class="section" id="trigonometria">
+<h2>Trigonometria</h2>
+<blockquote class="epigraph" id="pass1">
+<center>1</center>
+   <p></p>
+ Se in un triangolo rettangolo le proiezioni dei cateti sull'ipotenusa sono uguali
+ rispettivamente a 6 cm e a 12 cm, allora l'area del triangolo è uguale a:
+
+   <table class="risposte">
+   <tr >
+    <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">E</span></td>
+   </tr>
+   <tr>
+   <td id="rispP8_5"></td>
+   <td id="rispP8_1"></td>
+   <td id="rispP8_2"></td>
+   <td id="rispP8_3"></td>
+   <td id="rispP8_4"></td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP7" onclick="mostraSoluzione('soluzioneP7')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP7" onclick="nascondiSoluzione('soluzioneP7')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP7" style="display: none;">
+<center>
+   <p>per prima cosa visualizziamo la situazione descritta dal problema: </p>
+   <center>
+   <img src="../images/alfa/proiezioni-cateti.png" alt="proiezioni cateti" style=" max-width: 50%;">
+   </center>
+   <p> HB = 6 cm CH = 12 cm BC = HB + CH = 18 cm</p>
+   <p>utilizzando il teorema di Pitagora sul triangolo ABC posso scrivere:</p>
+   <p id="p7_1"></p>
+   <p>facendo lo stesso sui triangoli ACH e AHB</p>
+   <p id="p7_2"></p>
+   <p id="p7_3"></p>
+   <p>sottraendo tra loro le ultime due ottengo:</p>
+   <p id="p7_4"></p>
+   <p>a questo punto posso trovare AC e AB risolvendo il sistema:</p>
+   <p id="p7_5"></p>
+   <p id="p7_6"></p>
+   <p > e infine troviamo l'area secondo la consueta formula:</p>
+   <p id="p7_7"></p>
+ </center>
+
+</blockquote><blockquote class="epigraph" id="pass1">
+<center>2</center>
+   <p></p>
+   siano dati due triangoli rettangoli simili. Se il primo ha cateti di lunghezza 3 e 4 cm e il secondo
+   ha area pari al quadruplo dell'area del primo qual è la lunghezza dell'ipotenusa del secondo triangolo?
+   <table class="risposte">
+   <tr >
+    <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr>
+   <td >5 cm</td>
+   <td >10 cm</td>
+   <td >12 cm</td>
+   <td >16 cm</td>
+   <td >20 cm</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP4" onclick="mostraSoluzione('soluzioneP4')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP4" onclick="nascondiSoluzione('soluzioneP4')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP4" style="display: none;">
+<center>
+   <p>se i due triangoli sono tra loro <a class="reference external" href="https://library.weschool.com/lezione/criteri-similitudine-triangoli-simili-formule-geometria-euclidea-12828.html" target="_blank">simili</a></p>
+   <p>ne consegue che le misure dei cateti del secondo triangolo saranno k volte quelle del triangolo di partenza</p>
+   <p>da ciò si deduce che l'area del secondo triangolo sarà:</p>
+   <p id="AreaTriangoliSimili"></p>
+   <p>ne consegue che k = 2 </p>
+   <p> pertanto l'ipotenusa sarà il doppio dell'ipotenusa del primo triangolo:</p>
+   <p id="ipotenusa"> </p>
+ </center>
+
+</blockquote></div>
+<div class="section" id="geometria">
+<h2>Geometria</h2>
+<blockquote class="epigraph">
+<center>1</center>
+   <p></p>
+   i cateti di un triangolo rettangolo misurano rispettivamente <span id="cat1"></span> e <span id="cat2"></span>.
+   Quanto misura l'ipotenusa?
+   <table class="risposte">
+   <tr >
+    <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr>
+   <td id="p11_a">2</td>
+   <td id="p11_b">2</td>
+   <td >4</td>
+   <td >16</td>
+   <td id="p11_e"></td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP11" onclick="mostraSoluzione('soluzioneP11')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP11" onclick="nascondiSoluzione('soluzioneP11')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP11" style="display: none;">
+<center>
+   <p>in un triangolo rettangolo, noti i due cateti, l'ipotenusa si trova applicando
+   il teorema di Pitagora:</p>
+   <p id="solP11_1"></p>
+   <p id="solP11_2"></p>
+   <p id="solP11_3"></p>
+ </center>
+
+</blockquote></div>
+<div class="section" id="equazioni-esponenziali-e-logaritmiche">
+<h2>equazioni esponenziali e logaritmiche</h2>
+<blockquote class="epigraph" id="pass1">
+<center>1</center>
+   <p></p>
+ L'equazione esponenziale <span id="eq_esp_1"></span> ammette come soluzione:
+
+   <table class="risposte">
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr>
+   <td >-2</td>
+   <td >-1</td>
+   <td >-1/2</td>
+   <td >0</td>
+   <td >1/4</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP6" onclick="mostraSoluzione('soluzioneP6')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP6" onclick="nascondiSoluzione('soluzioneP6')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP6" style="display: none;">
+<center>
+   <p>per risolverla riscriviamo la frazione al secondo membro come potenza di 5</p>
+   <p id="eq_esp_2"></p>
+   <p>a questo punto basterà eguagliare gli esponenti e ricavare la x</p>
+   <p >2x + 1 = -1 </p>
+   <p >2x = -2 </p>
+   <p >x = -1 </p>
+ </center>
+
+</blockquote></div>
+<div class="section" id="problemi-parametrici">
+<h2>problemi parametrici</h2>
+<blockquote class="epigraph" id="pass1">
+<center>1</center>
+   <p></p>
+ L'equazione di secondo grado <span id="eq2grad_param_1"></span>, con k ≠ 0,
+ ha una soluzione uguale a –1 per:
+  <table class="risposte">
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr>
+   <td >-1</td>
+   <td >-1/5</td>
+   <td >1</td>
+   <td >3</td>
+   <td >nessun valore di k</td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP8" onclick="mostraSoluzione('soluzioneP8')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP8" onclick="nascondiSoluzione('soluzioneP8')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP8" style="display: none;">
+<center>
+   <p>applicando la formula risolutiva dell'equazione di secondo grado:</p>
+     <p id="eq2g"></p>
+       <p id="eq2g_formula"></p>
+        <p>otteniamo:</p>
+     <p id="p7_secg"></p>
+      <p>a questo punto è forse più veloce sostituire i valori di k proposti e vedere se
+      ne esiste uno per cui la condizione richiesta è soddisfatta!</p>
+      <p>per k = -1/5 si ottiene una soluzione uguale a -1 </p>
+ </center>
+</blockquote></div>
+<div class="section" id="funzioni">
+<h2>funzioni</h2>
+<blockquote class="epigraph" id="pass1">
+<center>1</center>
+   <p></p>
+ data la funzione f(x) = 3x - 6, quale delle seguenti risposte rappresenta la sua
+ funzione inversa?
+
+   <table class="risposte">
+   <tr >
+   <td><span class="cliccabile" onclick="sbagliata(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="giusta(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr>
+   <td >g(x) = x/3 - 6</td>
+   <td >g(x) = x/3 - 2 </td>
+   <td >g(x) = x/3 + 2 </td>
+   <td >g(x) = x/3 + 6 </td>
+   <td >g(x) = -x/3 + 2 </td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP9" onclick="mostraSoluzione('soluzioneP9')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP9" onclick="nascondiSoluzione('soluzioneP9')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP9" style="display: none;">
+<center>
+   <p>l'equazione che ci viene data è quella di una retta, che sappiamo essere invertibile
+   perché
+   <a class="reference external" href="https://library.weschool.com/lezione/funzione-inversa-iniettiva-suriettiva-immagine-di-una-funzione-12804.html" target="_blank">iniettiva</a>
+   . Per trovare l'equazione della sua inversa procediamo scambiando tra di loro
+   la x con la y:</p>
+   <p>x = 3y - 6</p>
+   <p>e poi esplicitiamo nuovamente la y:</p>
+   <p>3y = x + 6</p>
+   <p>y = x/3 + 2</p>
+ </center>
+
+</blockquote></div>
+<div class="section" id="frazioni-algebriche">
+<h2>frazioni algebriche</h2>
+<blockquote class="epigraph" >
+<center>1</center>
+   <p></p>
+    semplificare la seguente espressione: <span id="prob10"></span>
+
+   <table class="risposte">
+   <tr >
+   <td><span class="cliccabile" onclick="giusta(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr>
+   <td id="prob10_a"></td>
+   <td id="prob10_b"></td>
+   <td id="prob10_c"></td>
+   <td id="prob10_d"></td>
+   <td id="prob10_e"></td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP10" onclick="mostraSoluzione('soluzioneP10')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP10" onclick="nascondiSoluzione('soluzioneP10')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP10" style="display: none;">
+<center>
+   <p>facendo il m.c.m dei due denominatori x(x+2) posso eseguire la sottrazione:</p>
+    <p id="procP10_1"></p>
+ </center>
+
+</blockquote></div>
+<div class="section" id="radicali">
+<h2>Radicali</h2>
+<blockquote class="epigraph" >
+<center>1</center>
+   <p></p>
+    semplificare la seguente espressione <span id="p12_en"></span> con x > 0.
+
+   <table class="risposte">
+   <tr >
+   <td><span class="cliccabile" onclick="giusta(this)">A</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">B</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">C</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">D</span></td>
+   <td><span class="cliccabile" onclick="sbagliata(this)">E</span></td>
+   </tr>
+   <tr>
+   <td >x/4</td>
+   <td >x</td>
+   <td >64x</td>
+   <td id="p12_d"></td>
+   <td id="p12_e"></td>
+   </tr>
+   </table>
+</blockquote>
+
+<center>
+<button id="bottoneMostra_soluzioneP12" onclick="mostraSoluzione('soluzioneP12')">Mostra Soluzione</button>
+<button id="bottoneNascondi_soluzioneP12" onclick="nascondiSoluzione('soluzioneP12')" style="display: none;">Nascondi Soluzione</button>
+</center>
+
+<blockquote class="epigraph" id="soluzioneP12" style="display: none;">
+<center>
+   <p>il primo fattore diventa:</p>
+   <p id="p12s1"></p>
+   <p>il secondo fattore invece:</p>
+    <p id="p12s2"></p>
+   <p>facendo il prodotto dei due ottengo:</p>
+    <p id="p12s3"></p>
+ </center>
+
+</blockquote><div class="section" id="bibliografia">
+<h3>Bibliografia</h3>
+<ul class="simple">
+<!--<li>AA. VV. <a class="reference external" href="https://amzn.to/2OPEFf3" target="_blank">Tutto Fisica - Studio - riepilogo - sintesi</a>, De Agostini, 2009</li>
+ -->
+</ul>
+</div><script src="../js/alfaTestMate.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/alfaTestMate.css"></div>
+
+          </section>
+      </div>
+      </article>
+  </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+      
+      <!-- clicky badge-->
+      <a title="Real Time Web Analytics" href="http://clicky.com/101130897"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+        <script src="//static.getclicky.com/js" type="text/javascript"></script>
+        <script type="text/javascript">try{ clicky.init(101130897); }catch(e){}</script>
+        <noscript><p>
+        <img alt="Clicky" id="clicky" src="//in.getclicky.com/101130897ns.gif" /></p></noscript>
+
+
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="../theme/js/script.js"></script>
+
+</body>
+</html>
