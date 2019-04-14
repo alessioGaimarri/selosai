@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <!-- P5.js-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+   <!-- katex -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.css" integrity="sha384-9tPv11A+glH/on/wEu99NVwDPwkMQESOocs/ZGXPoIiLE8MU/qkqUcZ3zzL+6DuH" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0-beta/dist/katex.min.js" integrity="sha384-U8Vrjwb8fuHMt6ewaCy8uqeUXv4oitYACKdB0VziCerzt011iQ/0TqlSlv8MReCm" crossorigin="anonymous"></script>
+  <!--ketex -->
+  
+
+  <title>il calcolo combinatorio</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="./" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="./theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="./theme/css/code_blocks/monokai.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="./combinatoria.html" rel="canonical" />
+
+
+    <meta name="author" content="Alessio Gaimarri">
+
+    <meta name="tags" content="matematica">
+    <meta name="tags" content="combinatoria">
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="selosai"/>
+<meta property="og:title" content="il calcolo combinatorio"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="./combinatoria.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2019-04-13 08:05:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="./author/alessio-gaimarri.html">
+<meta property="article:section" content="matematica"/>
+<meta property="article:tag" content="matematica"/>
+<meta property="article:tag" content="combinatoria"/>
+<meta property="og:image" content="./images/combinatoria_1.jpg">
+
+<!-- Twitter Card -->
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "il calcolo combinatorio",
+  "headline": "il calcolo combinatorio",
+  "datePublished": "2019-04-13 08:05:00+02:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "Alessio Gaimarri",
+    "url": "./author/alessio-gaimarri.html"
+  },
+  "image": "./images/combinatoria_1.jpg",
+  "url": "./combinatoria.html",
+  "description": ""
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="./pages/about.html">Chi sono</a></li>
+              <li role="presentation"><a href="./pages/alfa_test_logica.html">α test - logica</a></li>
+              <li role="presentation"><a href="./pages/alfa_test_mate.html">α test - Matematica</a></li>
+              <li role="presentation"><a href="./pages/archivio.html">Archivio</a></li>
+              <li role="presentation"><a href="./pages/missione.html">Missione</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="./" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">il calcolo combinatorio</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="./author/alessio-gaimarri.html">Alessio Gaimarri</a>
+            | <time datetime="sab 13 aprile 2019">sab 13 aprile 2019</time>
+        </span>
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('./images/combinatoria_1.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p>Il calcolo combinatorio è quella parte della matematica che ha come oggetto il calcolo dei modi con i quali possono essere raggruppati
+o ordinati, secondo date regole, gli elementi di un insieme finito.
+Come primo esempio consideriamo l'insieme delle lettere dell'alfabeto latino moderno costituito da 26 lettere. <a class="footnote-reference" href="#id3" id="id1">[1]</a>:</p>
+<blockquote class="epigraph">
+<center>a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z </center>
+</blockquote><p>La domanda a cui la matematica combinatoria permette di rispondere è:</p>
+<blockquote class="epigraph">
+&quot;quante sono le sequenze possibili composte da un numero di
+lettere minore o uguale al totale dei simboli a nostra disposizione?&quot;</blockquote>
+<div class="section" id="disposizioni">
+<h2>Disposizioni</h2>
+<p>Se presupponiamo che l'ordine delle lettere sia importante, come è naturale nel nostro linguaggio:</p>
+<blockquote class="epigraph">
+<center>arco, ocra, ocar </center>
+</blockquote><p>sono sequenze diverse, pur essendo composte dalle stesse lettere e hanno significati diversi,
+quando ne hanno uno.
+Se decidiamo inoltre di non poter utilizzare la stessa lettera più di una volta parliamo di
+<strong>disposizioni semplici</strong>, altrimenti se viene meno questa regola abbiamo a che fare con
+<strong>disposizioni con ripetizione</strong>:</p>
+<blockquote class="epigraph">
+<center>mamma, ammam, ammma, ... </center>
+</blockquote><p>Ricapitolando possiamo dire che le disposizioni sono le sequenze di <strong>k</strong> elementi prese da un insieme
+finito di <strong>n</strong> elementi in cui conta l'<strong>ordine</strong> degli elementi nella sequenza.
+Vediamo ora come calcolare il loro numero a partire dai valori di <strong>n</strong> e <strong>k</strong>
+ammettendo o meno le ripetizioni.</p>
+<div class="section" id="disposizioni-semplici">
+<h3>Disposizioni semplici</h3>
+<p>Sono sequenze in cui conta l'ordine degli elementi e nessun elemento può ripetersi.
+Per generare una sequenza di questo tipo possiamo prendere un sacchetto contenente
+26 tessere, una per ciascuna lettera dell'alfabeto e generare la sequenza estraendo
+<strong>k</strong> tessere, con k minore o uguale di 26, senza rimettere nel sacchetto quelle pescate.
+Ragionando su questo semplice metodo possiamo facilmente ricavare il numero di sequenze
+possibili al variare di k.</p>
+<ul class="simple">
+<li>Se k = 1 ovviamente ho 26 possibili sequenze di una lettera, una per ciascuna lettera.</li>
+<li>Se k = 2 per la prima lettera pescata avrò 26 possibilità diverse, mentre per la seconda il numero
+di possibilità si è ridotto a 26-1 = 25 perché la lettera pescata in precedenza non è più ammissibile
+(e pertanto non è stata rimessa nel sacchetto).</li>
+</ul>
+<p>Per trovare il numero delle sequenze ottenibili posso anche utilizzare un metodo grafico che
+consiste nel disegnare un diagramma ad albero in cui da un punto di partenza fissato faccio
+partire un numero di rami uguale al numero dei possibili esiti di ciascuna estrazione.
+Così facendo il numero dei rami nel livello più alto corrisponderà al numero di sequenze possibili.
+Nel caso k = 1 abbiamo 26 rami che si diramano dal punto di partenza.
+Nel caso k = 2 aggiungiamo al grafico del caso precedente 25 ulteriori diramazioni per ciascuno dei 26 rami
+già presenti al primo livello. Il totale dei rami per k = 2 sarà quindi 26*25 = 650.</p>
+<div class="figure" style="width: 800px; height: auto; max-width: 100%;">
+<img alt="diagramma ad albero disposizioni semplici" src="images/disposizion_semplici.gif" style="width: 720px; height: auto; max-width: 100%;">
+<p class="caption">diagramma ad albero delle disposizioni semplici di k = 2 elementi presi in un insieme di n=4 costituito dalle prime 4 lettere dell'alfabeto.</p>
+</div><p>Il nostro ragionamento può essere ripetuto e generalizzato fino a quando
+il numero di lettere pescate non raggiunge quello delle lettere nel sacchetto, portandoci alla formula:</p>
+<blockquote class="epigraph">
+   <center>
+   <p id="disposizioniSemplici"></p>
+      </center>
+</blockquote><p>Ad esempio proviamo a considerare quante sono le sequenze di 4 lettere prive di ripetizioni ottenibili
+dall'alfabeto internazionale di 26 lettere:</p>
+<blockquote class="epigraph">
+   <center>
+   <p id="disposizioniSemplici_esempio"></p>
+      </center>
+</blockquote></div>
+<div class="section" id="disposizioni-con-ripetizione">
+<h3>Disposizioni con ripetizione</h3>
+<p>Sono sequenze ordinate in cui ciascuna lettera può comparire più volte.  Il numero di
+sequenze ottenibili secondo queste regole sarà più elevato del caso precedente per il semplice
+fatto che ad ogni sorteggio il numero delle lettere stavolta rimarrà invariato
+(dobbiamo cioè rimettere ogni volta nel sacchetto la lettera pescata). Quindi seguendo il medesimo
+procedimento visto per le disposizioni semplici avremo che a ogni nuovo livello del
+nostro diagramma ad albero il numero di rami che si dipartiranno da uno dei precedenti rimane costante.
+La formula generale per ottenere il numero di disposizioni con ripetizione pertanto diventa:</p>
+<blockquote class="epigraph">
+   <center>
+   <p id="disposizioniConRipetizione"></p>
+      </center>
+</blockquote><p>In questo caso le sequenze di 4 lettere ottenibili
+dall'alfabeto internazionale di 26 lettere diventano:</p>
+<blockquote class="epigraph">
+   <center>
+   <p id="disposizioniConRipetizione_esempio"></p>
+      </center>
+</blockquote><p>Come ben saprete, soprattutto chi di voi ha mai giocato a Scarabeo, nella lingua italiana solo un minuscolo
+sottoinsieme di tutte le possibili sequenze di 4 lettere hanno un significato, nello specifico solo 1146 sulle 456976 possibili,
+corrispondenti allo 0,25% del totale. <a class="footnote-reference" href="#id4" id="id2">[2]</a></p>
+</div>
+<div class="section" id="permutazioni-semplici">
+<h3>Permutazioni semplici</h3>
+<blockquote class="epigraph">
+Si chiama <strong>permutazione</strong> di n oggetti distinti ogni ordinamento degli n oggetti dati.</blockquote>
+<p>Se considero un mazzo di carte ogni volta che lo mescolo non faccio altro che variare l'ordine
+iniziale generando così una permutazione. Quante sono le possibili permutazioni di n oggetti distinti
+come le carte da gioco? La formula coincide con quella già vista per le disposizioni semplici
+nel caso in cui k = n.</p>
+<blockquote class="epigraph">
+   <center>
+   <p id="permutazioniElementiDistinti"></p>
+      </center>
+</blockquote><p>Matematicamente equivale al fattoriale del numero degli n elementi distinti, indicato con il simbolo <strong>n!</strong>.
+In un mazzo da poker composto da 52 carte da gioco le permutazioni ottenibili sono:</p>
+<blockquote class="epigraph">
+   <center>
+   <p id="permutazioniElementiDistinti_esempio"></p>
+      </center>
+</blockquote><p>un numero così alto ci fa capire che mescolando accuratamente un mazzo di carte le probabilità di riottenere
+lo stesso ordine iniziale sono praticamente nulle.</p>
+</div>
+<div class="section" id="permutazioni-con-ripetizione">
+<h3>Permutazioni con ripetizione</h3>
+<p>Un altro esempio di permutazione ben nota agli appassionati di enigmistica sono gli <strong>anagrammi</strong>.
+Data una parola si deve trovarne una seconda variando l'ordine delle lettere che la compongono.
+Dato che la maggior parte delle parole contengono lettere ripetute possiamo considerare gli anagrammi come
+un esempio di permutazioni con ripetizione:</p>
+<blockquote class="epigraph">
+Si chiama <strong>permutazione con ripetizione</strong> ogni permutazione di n oggetti <strong>NON</strong> tutti distinti tra loro.</blockquote>
+<p>il numero di permutazioni con ripetizione è inferiore a quello senza ripetizione perché vanno esclusi dal
+conteggio quegli scambi tra lettere uguali che non cambiano il significato della sequenza.</p>
+<blockquote class="epigraph">
+   <center>
+   M<span style="color: red">A</span>MM<span style="color: green">A</span> = M<span style="color: green">A</span>MM<span style="color: red">A</span>
+      </center>
+</blockquote><p>per ciascuna delle permutazioni della parola mamma, possiamo costruire 2! permutazioni permutando tra loro le due
+lettere A. La stessa cosa vale per le tre lettere M ma stavolta per ciascuna permutazione saranno 3! = 6 quelle ottenibili
+scambiando tra loro le tre M ...</p>
+<blockquote class="epigraph">
+   <center>
+   <span style="color: red">M</span>A<span style="color: green">M</span><span style="color: blue">M</span>A = <span style="color: red">M</span>A<span style="color: blue">M</span><span style="color: green">M</span>A =
+      </center>
+      <center>
+   =<span style="color: green">M</span>A<span style="color: red">M</span><span style="color: blue">M</span>A = <span style="color: green">M</span>A<span style="color: blue">M</span><span style="color: red">M</span>A =
+      </center>
+       <center>
+   =<span style="color: blue">M</span>A<span style="color: red">M</span><span style="color: green">M</span>A = <span style="color: blue">M</span>A<span style="color: green">M</span><span style="color: red">M</span>A
+      </center>
+</blockquote><p>Quindi per ottenere il numero di permutazioni con ripetizione il fattoriale del numero di lettere che compongono la parola
+va diviso per il prodotto dei fattoriali delle permutazioni possibili per le lettere che si ripetono:</p>
+<blockquote class="epigraph">
+   <center>
+   <p id="permutazioniConRipetizione_esempio"></p>
+      </center>
+</blockquote><p>Generalizzando possiamo dire che le permutazioni con ripetizione di n oggetti
+(di cui a<sub>1</sub> uguali tra loro, a<sub>2</sub> uguali tra loro e distinti dai precedenti, ..., a<sub>k</sub> uguali tra loro e distinti dai precedenti)
+con a<sub>1</sub> + a<sub>2</sub> + ... + a<sub>k</sub> = n sono date dalla formula:</p>
+<blockquote class="epigraph">
+   <center>
+   <p id="permutazioniConRipetizione"></p>
+      </center>
+</blockquote></div>
+</div>
+<div class="section" id="combinazioni">
+<h2>Combinazioni</h2>
+<p>Sono sequenze di simboli in cui l'ordine non ha importanza.
+Anche in questo caso dobbiamo distinguere tra il caso in cui sono ammesse ripetizioni
+da quello che invece le esclude. Un esempio pratico in cui l'ordine degli elementi della
+sequenza non conta può essere quello in cui si mescolano tra loro diversi colori per
+ottenerne uno nuovo. L'ordine con cui metto i colori non altera il colore finale della miscela.</p>
+<div class="section" id="combinazioni-semplici">
+<h3>Combinazioni semplici</h3>
+<blockquote class="epigraph">
+<center>Dato un insieme di n elementi, si chiama combinazione semplice degli n elementi di classe k (con k minore o uguale a n)
+ogni sottoinsieme dell'insieme dato avente k elementi</center>
+</blockquote><p>Il numero complessivo di combinazioni di <strong>n</strong> oggetti di classe <strong>k</strong> in matematica è rappresentato da un simbolo
+specifico, che prende il nome di <strong>coefficiente binomiale</strong></p>
+<blockquote class="epigraph">
+   <center>
+   <p id="coeffBinomiale"></p>
+      </center>
+</blockquote><p>definito a condizione che n sia maggiore o uguale a 1 e che 0 ≤ k ≤ n.
+Riflettiamo su alcuni casi particolari:</p>
+<blockquote class="epigraph">
+   <center>
+   <p id="coeffBinomiale_esempio_0"></p>
+      </center>
+</blockquote><p>dal momento che l'unico sottoinsieme di 0 elementi di qualunque insieme è l'insieme vuoto.</p>
+<blockquote class="epigraph">
+   <center>
+   <p id="coeffBinomiale_esempio_1"></p>
+      </center>
+</blockquote><p>dato che il numero di sottoinsiemi composti da un solo elemento corrisponderà per forza di cose con il
+numero n di elementi nell'insieme.</p>
+</div>
+<div class="section" id="combinazioni-con-ripetizione">
+<h3>Combinazioni con ripetizione</h3>
+<blockquote class="epigraph">
+<center>Dati n oggetti distinti, si chiama combinazione con ripetizione degli n oggetti di classe k, ogni
+raggruppamento non ordinato di k oggetti, scelti tra quelli assegnati, ammettendo la possibilità di ripetere
+gli oggetti</center>
+</blockquote><blockquote class="epigraph">
+<center>Il numero di combinazioni con ripetizione di n oggetti di classe k equivale al numero di n-uple di interi
+non negativi (x_1, ... , x_n) soluzioni dell'equazione:</center>
+ <center>
+   <p > x_1 +, ... , + x_n = k</p>
+      </center>
+          <center>
+   ed è assegnato dalla formula:
+      </center>
+      <center>
+   <p id="combConRip"> </p>
+      </center>
+</blockquote></div>
+<div class="section" id="esempio">
+<h3>Esempio</h3>
+<blockquote class="epigraph">
+<center>Quanti possibili tipi di confezioni da 10 di M&M's di colore rosso, giallo e verde si possono
+confezionare?</center>
+</blockquote><p>Ogni possibile confezione può essere rappresentata come un raggruppamento di 10 lettere, scelte tra le iniziali
+dei 3 diversi colori possibili R = Rosso, G = Giallo, V = Verde.
+Una confezione contenente 5 confetti rossi, 2 gialli e 3 verdi verrà rappresentata in questo modo:</p>
+<blockquote class="epigraph">
+<center>RRRRRGGVVV</center>
+</blockquote><p>Questo problema equivale a stabilire il numero di combinazioni con ripetizione di n = 3 oggetti di classe
+k = 10. Dal momento che le lettere/colori possono essere ripetute e che l'ordine non ha importanza una
+confezione resta univocamente determinata una volta stabiliti i numeri x<sub>rosse</sub> , x<sub>verdi</sub> , x<sub>gialle</sub>
+che soddisfano l'equazione:</p>
+<blockquote class="epigraph">
+<center><p id="condi1"></p></center>
+</blockquote><p>Quindi il nostro problema equivale a quello di stabilire il numero di terne che soddisfano questa equazione.
+Se rappresento la mia confezione in questo modo:</p>
+<blockquote class="epigraph">
+<center><p id="condi2"></p></center>
+</blockquote><p>considerando i confetti come asterischi e mettendo una barra verticale per separare i confetti di colore diverso
+l'insieme delle terne corrisponde con le permutazioni di n + (k -1)  oggetti di cui n uguali tra loro e
+(k-1)  uguali  tra loro e distinti dai precedenti.</p>
+<blockquote class="epigraph">
+<center><p id="soluzione"></p></center>
+</blockquote></div>
+</div>
+<div class="section" id="note">
+<h2>NOTE</h2>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Questa in realtà è la versione moderna ed estesa del repertorio latino originario,
+ossia quello utilizzato per la lingua latina. Gli antichi Romani infatti usavano solo 23 grafi,
+non conoscendo la W, di origine anglosassone, mentre le lettere U e J fecero la loro comparsa
+nel Rinascimento.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>potete trovarne l'elenco all'indirizzo  <a class="reference external" href="https://www.dizy.com/it/len/4">link</a></td></tr>
+</tbody>
+</table>
+<div class="section" id="bibliografia">
+<h3>Bibliografia</h3>
+<ul class="simple">
+</ul>
+</div><!--
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+this.page.url = "https://alessiogaimarri.github.io/selosai/";  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = "basket"; // Replace PAGE_IDENTIFIER (lo slug del post)
+ };
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://selosai.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script id="dsq-count-scr" src="//selosai.disqus.com/count.js" async></script>
+--><link rel="stylesheet" type="text/css" href="./css/combinatoria.css">
+<script src="./js/combinatoria.js"></script></div>
+
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" 
+                       href="https://twitter.com/share?text=il calcolo combinatorio&amp;url=https://alessiogaimarri.github.io/selosai/combinatoria.html" 
+                       onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://alessiogaimarri.github.io/selosai/combinatoria.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://alessiogaimarri.github.io/selosai/combinatoria.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+                <aside class="post-tags">
+<a href="./tag/matematica.html">matematica</a><a href="./tag/combinatoria.html">combinatoria</a>                </aside>
+
+                <div class="clear"></div>
+
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+      
+      <!-- clicky badge-->
+      <a title="Real Time Web Analytics" href="http://clicky.com/101130897"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
+        <script src="//static.getclicky.com/js" type="text/javascript"></script>
+        <script type="text/javascript">try{ clicky.init(101130897); }catch(e){}</script>
+        <noscript><p>
+        <img alt="Clicky" id="clicky" src="//in.getclicky.com/101130897ns.gif" /></p></noscript>
+
+
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="./theme/js/script.js"></script>
+
+</body>
+</html>
